@@ -11,11 +11,11 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/Ccheers/grpc-gateway/protoc-gen-openapiv2/grpc-gateway-internal/descriptor"
+	"github.com/Ccheers/grpc-gateway/protoc-gen-openapiv2/grpc-gateway-internal/descriptor/openapiconfig"
+	"github.com/Ccheers/grpc-gateway/protoc-gen-openapiv2/grpc-gateway-internal/httprule"
+	openapi_options "github.com/Ccheers/grpc-gateway/protoc-gen-openapiv2/options"
 	"github.com/google/go-cmp/cmp"
-	"github.com/grpc-ecosystem/grpc-gateway/v2/internal/descriptor"
-	"github.com/grpc-ecosystem/grpc-gateway/v2/internal/descriptor/openapiconfig"
-	"github.com/grpc-ecosystem/grpc-gateway/v2/internal/httprule"
-	openapi_options "github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2/options"
 	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
 	"google.golang.org/genproto/googleapis/api/annotations"
 	"google.golang.org/genproto/googleapis/api/visibility"
@@ -10310,9 +10310,9 @@ func TestQueryParameterType(t *testing.T) {
 			Get: &openapiOperationObject{
 				Parameters: openapiParametersObject{
 					{
-						Name:        "Address[string]",
-						In:          "query",
-						Type:        "integer",
+						Name: "Address[string]",
+						In:   "query",
+						Type: "integer",
 					},
 				},
 			},

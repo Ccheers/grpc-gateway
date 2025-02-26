@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/grpc-ecosystem/grpc-gateway/v2/internal/descriptor"
+	"github.com/Ccheers/grpc-gateway/protoc-gen-openapiv2/grpc-gateway-internal/descriptor"
 	"gopkg.in/yaml.v3"
 )
 
