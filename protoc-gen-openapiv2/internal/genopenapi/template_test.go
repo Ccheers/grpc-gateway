@@ -150,20 +150,20 @@ func TestMessageToQueryParametersWithEnumAsInt(t *testing.T) {
 				{
 					Name:     "a",
 					In:       "query",
-					Required: false,
+					Required: true,
 					Type:     "string",
 				},
 				{
 					Name:     "b",
 					In:       "query",
-					Required: false,
+					Required: true,
 					Type:     "number",
 					Format:   "double",
 				},
 				{
 					Name:             "c",
 					In:               "query",
-					Required:         false,
+					Required:         true,
 					Type:             "array",
 					CollectionFormat: "multi",
 				},
@@ -229,19 +229,19 @@ func TestMessageToQueryParametersWithEnumAsInt(t *testing.T) {
 				{
 					Name:     "nested.a",
 					In:       "query",
-					Required: false,
+					Required: true,
 					Type:     "string",
 				},
 				{
 					Name:     "nested.deep.b",
 					In:       "query",
-					Required: false,
+					Required: true,
 					Type:     "string",
 				},
 				{
 					Name:     "nested.deep.c",
 					In:       "query",
-					Required: false,
+					Required: true,
 					Type:     "integer",
 					Enum:     []int{0, 1},
 					Default:  0,
@@ -337,20 +337,20 @@ func TestMessageToQueryParametersWithOmitEnumDefaultValue(t *testing.T) {
 				{
 					Name:     "a",
 					In:       "query",
-					Required: false,
+					Required: true,
 					Type:     "string",
 				},
 				{
 					Name:     "b",
 					In:       "query",
-					Required: false,
+					Required: true,
 					Type:     "number",
 					Format:   "double",
 				},
 				{
 					Name:             "c",
 					In:               "query",
-					Required:         false,
+					Required:         true,
 					Type:             "array",
 					CollectionFormat: "multi",
 				},
@@ -416,19 +416,19 @@ func TestMessageToQueryParametersWithOmitEnumDefaultValue(t *testing.T) {
 				{
 					Name:     "nested.a",
 					In:       "query",
-					Required: false,
+					Required: true,
 					Type:     "string",
 				},
 				{
 					Name:     "nested.deep.b",
 					In:       "query",
-					Required: false,
+					Required: true,
 					Type:     "string",
 				},
 				{
 					Name:     "nested.deep.c",
 					In:       "query",
-					Required: false,
+					Required: true,
 					Type:     "string",
 					Enum:     []string{"TRUE"},
 				},
@@ -523,20 +523,20 @@ func TestMessageToQueryParameters(t *testing.T) {
 				{
 					Name:     "a",
 					In:       "query",
-					Required: false,
+					Required: true,
 					Type:     "string",
 				},
 				{
 					Name:     "b",
 					In:       "query",
-					Required: false,
+					Required: true,
 					Type:     "number",
 					Format:   "double",
 				},
 				{
 					Name:             "c",
 					In:               "query",
-					Required:         false,
+					Required:         true,
 					Type:             "array",
 					CollectionFormat: "multi",
 				},
@@ -602,19 +602,19 @@ func TestMessageToQueryParameters(t *testing.T) {
 				{
 					Name:     "nested.a",
 					In:       "query",
-					Required: false,
+					Required: true,
 					Type:     "string",
 				},
 				{
 					Name:     "nested.deep.b",
 					In:       "query",
-					Required: false,
+					Required: true,
 					Type:     "string",
 				},
 				{
 					Name:     "nested.deep.c",
 					In:       "query",
-					Required: false,
+					Required: true,
 					Type:     "string",
 					Enum:     []string{"FALSE", "TRUE"},
 					Default:  "FALSE",
@@ -954,7 +954,7 @@ func TestMessageToQueryParametersWithJsonName(t *testing.T) {
 				{
 					Name:     "testFieldA",
 					In:       "query",
-					Required: false,
+					Required: true,
 					Type:     "string",
 				},
 			},
@@ -990,7 +990,7 @@ func TestMessageToQueryParametersWithJsonName(t *testing.T) {
 				{
 					Name:     "subMessage.testFieldA",
 					In:       "query",
-					Required: false,
+					Required: true,
 					Type:     "string",
 				},
 			},
@@ -1143,13 +1143,13 @@ func TestMessageToQueryParametersWellKnownTypes(t *testing.T) {
 				{
 					Name:     "a_field_mask",
 					In:       "query",
-					Required: false,
+					Required: true,
 					Type:     "string",
 				},
 				{
 					Name:     "a_timestamp",
 					In:       "query",
-					Required: false,
+					Required: true,
 					Type:     "string",
 					Format:   "date-time",
 				},
@@ -1269,7 +1269,7 @@ func TestMessageToQueryParametersWithRequiredField(t *testing.T) {
 				{
 					Name:             "c",
 					In:               "query",
-					Required:         false,
+					Required:         true,
 					Type:             "array",
 					CollectionFormat: "multi",
 				},
@@ -1382,29 +1382,33 @@ func TestMessageToQueryParametersWithEnumFieldOption(t *testing.T) {
 			Message: "ExampleMessage",
 			Params: []openapiParameterObject{
 				{
-					Name: "a",
-					In:   "query",
-					Type: "string",
-					Enum: []string{"enum1", "enum2"},
+					Name:     "a",
+					In:       "query",
+					Type:     "string",
+					Enum:     []string{"enum1", "enum2"},
+					Required: true,
 				},
 				{
-					Name: "b",
-					In:   "query",
-					Type: "string",
+					Name:     "b",
+					In:       "query",
+					Type:     "string",
+					Required: true,
 				},
 				{
-					Name:    "c",
-					In:      "query",
-					Type:    "string",
-					Enum:    []string{"FALSE", "TRUE"},
-					Default: "FALSE",
+					Name:     "c",
+					In:       "query",
+					Type:     "string",
+					Enum:     []string{"FALSE", "TRUE"},
+					Default:  "FALSE",
+					Required: true,
 				},
 				{
-					Name:    "d",
-					In:      "query",
-					Type:    "string",
-					Enum:    []string{"FALSE", "TRUE"},
-					Default: "FALSE",
+					Name:     "d",
+					In:       "query",
+					Type:     "string",
+					Enum:     []string{"FALSE", "TRUE"},
+					Default:  "FALSE",
+					Required: true,
 				},
 			},
 		},
@@ -3518,7 +3522,7 @@ func TestApplyTemplateRequestWithBodyQueryParameters(t *testing.T) {
 			want: []paramOut{
 				{"parent", "path", true},
 				{"book", "body", true},
-				{"book_id", "query", false},
+				{"book_id", "query", true},
 			},
 		},
 		{
@@ -3530,8 +3534,8 @@ func TestApplyTemplateRequestWithBodyQueryParameters(t *testing.T) {
 			}()},
 			want: []paramOut{
 				{"parent", "path", true},
-				{"book", "query", false},
-				{"book_id", "query", false},
+				{"book", "query", true},
+				{"book_id", "query", true},
 			},
 		},
 	}
@@ -4199,6 +4203,7 @@ func TestExpandedPathParametersStringType(t *testing.T) {
 		for _, param := range actualParams {
 			refs := make(refMap)
 			actualParamType := schemaOfField(param.Target, reg, refs)
+			actualParamType.Required = nil // Required is not relevant for path parameters
 			if !reflect.DeepEqual(actualParamType, expectedParamType) {
 				t.Errorf("Expected all path parameters to be type of 'string', actual: %#+v", actualParamType)
 			}
@@ -4441,6 +4446,7 @@ func TestSchemaOfField(t *testing.T) {
 				schemaCore: schemaCore{
 					Type: "string",
 				},
+				Required: []string{"primitive_field"},
 			},
 		},
 		{
@@ -4461,6 +4467,7 @@ func TestSchemaOfField(t *testing.T) {
 						},
 					},
 				},
+				Required: []string{"repeated_primitive_field"},
 			},
 		},
 		{
@@ -4477,6 +4484,7 @@ func TestSchemaOfField(t *testing.T) {
 					Type: "object",
 				},
 				Properties: &openapiSchemaObjectProperties{},
+				Required:   []string{"empty_field"},
 			},
 		},
 		{
@@ -4492,6 +4500,7 @@ func TestSchemaOfField(t *testing.T) {
 				schemaCore: schemaCore{
 					Type: "string",
 				},
+				Required: []string{"wrapped_field"},
 			},
 		},
 		{
@@ -4508,6 +4517,7 @@ func TestSchemaOfField(t *testing.T) {
 					Type:   "string",
 					Format: "date-time",
 				},
+				Required: []string{"wrapped_field"},
 			},
 		},
 		{
@@ -4523,6 +4533,7 @@ func TestSchemaOfField(t *testing.T) {
 				schemaCore: schemaCore{
 					Type: "string",
 				},
+				Required: []string{"wrapped_field"},
 			},
 		},
 		{
@@ -4538,6 +4549,7 @@ func TestSchemaOfField(t *testing.T) {
 				schemaCore: schemaCore{
 					Type: "string",
 				},
+				Required: []string{"wrapped_field"},
 			},
 		},
 		{
@@ -4559,6 +4571,7 @@ func TestSchemaOfField(t *testing.T) {
 						},
 					},
 				},
+				Required: []string{"repeated_wrapped_field"},
 			},
 		},
 		{
@@ -4575,6 +4588,7 @@ func TestSchemaOfField(t *testing.T) {
 					Type:   "string",
 					Format: "byte",
 				},
+				Required: []string{"wrapped_field"},
 			},
 		},
 		{
@@ -4591,6 +4605,7 @@ func TestSchemaOfField(t *testing.T) {
 					Type:   "integer",
 					Format: "int32",
 				},
+				Required: []string{"wrapped_field"},
 			},
 		},
 		{
@@ -4607,6 +4622,7 @@ func TestSchemaOfField(t *testing.T) {
 					Type:   "integer",
 					Format: "int64",
 				},
+				Required: []string{"wrapped_field"},
 			},
 		},
 		{
@@ -4623,6 +4639,7 @@ func TestSchemaOfField(t *testing.T) {
 					Type:   "string",
 					Format: "int64",
 				},
+				Required: []string{"wrapped_field"},
 			},
 		},
 		{
@@ -4639,6 +4656,7 @@ func TestSchemaOfField(t *testing.T) {
 					Type:   "string",
 					Format: "uint64",
 				},
+				Required: []string{"wrapped_field"},
 			},
 		},
 		{
@@ -4655,6 +4673,7 @@ func TestSchemaOfField(t *testing.T) {
 					Type:   "number",
 					Format: "float",
 				},
+				Required: []string{"wrapped_field"},
 			},
 		},
 		{
@@ -4671,6 +4690,7 @@ func TestSchemaOfField(t *testing.T) {
 					Type:   "number",
 					Format: "double",
 				},
+				Required: []string{"wrapped_field"},
 			},
 		},
 		{
@@ -4686,6 +4706,7 @@ func TestSchemaOfField(t *testing.T) {
 				schemaCore: schemaCore{
 					Type: "boolean",
 				},
+				Required: []string{"wrapped_field"},
 			},
 		},
 		{
@@ -4701,6 +4722,7 @@ func TestSchemaOfField(t *testing.T) {
 				schemaCore: schemaCore{
 					Type: "object",
 				},
+				Required: []string{"wrapped_field"},
 			},
 		},
 		{
@@ -4714,6 +4736,7 @@ func TestSchemaOfField(t *testing.T) {
 			refs: make(refMap),
 			expected: openapiSchemaObject{
 				schemaCore: schemaCore{},
+				Required:   []string{"wrapped_field"},
 			},
 		},
 		{
@@ -4732,6 +4755,7 @@ func TestSchemaOfField(t *testing.T) {
 						Type: "object",
 					}},
 				},
+				Required: []string{"wrapped_field"},
 			},
 		},
 		{
@@ -4747,6 +4771,7 @@ func TestSchemaOfField(t *testing.T) {
 				schemaCore: schemaCore{
 					Type: "string",
 				},
+				Required: []string{"wrapped_field"},
 			},
 		},
 		{
@@ -4762,6 +4787,7 @@ func TestSchemaOfField(t *testing.T) {
 				schemaCore: schemaCore{
 					Ref: "#/definitions/exampleMessage",
 				},
+				Required: []string{"message_field"},
 			},
 		},
 		{
@@ -4784,6 +4810,7 @@ func TestSchemaOfField(t *testing.T) {
 				},
 				Title:       "field title",
 				Description: "field description",
+				Required:    []string{"map_field"},
 			},
 		},
 		{
@@ -4805,6 +4832,7 @@ func TestSchemaOfField(t *testing.T) {
 				},
 				Title:       "field title",
 				Description: "field description",
+				Required:    []string{"array_field"},
 			},
 		},
 		{
@@ -4824,6 +4852,7 @@ func TestSchemaOfField(t *testing.T) {
 				},
 				Title:       "field title",
 				Description: "field description",
+				Required:    []string{"primitive_field"},
 			},
 		},
 		{
@@ -4843,6 +4872,7 @@ func TestSchemaOfField(t *testing.T) {
 				},
 				Title:       "field title",
 				Description: "field description",
+				Required:    []string{"message_field"},
 			},
 		},
 		{
@@ -4872,6 +4902,7 @@ func TestSchemaOfField(t *testing.T) {
 				},
 				Title:       "field title",
 				Description: "field description",
+				Required:    []string{"map_field"},
 			},
 		},
 		{
@@ -4900,6 +4931,7 @@ func TestSchemaOfField(t *testing.T) {
 				},
 				Title:       "field title",
 				Description: "field description",
+				Required:    []string{"array_field_option"},
 			},
 		},
 		{
@@ -4926,6 +4958,7 @@ func TestSchemaOfField(t *testing.T) {
 				},
 				Title:       "field title",
 				Description: "field description",
+				Required:    []string{"primitive_field_option"},
 			},
 		},
 		{
@@ -4956,6 +4989,7 @@ func TestSchemaOfField(t *testing.T) {
 				},
 				Title:       "field title",
 				Description: "field description",
+				Required:    []string{"primitive_field_option"},
 			},
 		},
 		{
@@ -4982,6 +5016,7 @@ func TestSchemaOfField(t *testing.T) {
 				},
 				Title:       "field title",
 				Description: "field description",
+				Required:    []string{"message_field_option"},
 			},
 		},
 		{
@@ -5014,6 +5049,7 @@ func TestSchemaOfField(t *testing.T) {
 					Type: "string",
 				},
 				ReadOnly: true,
+				Required: []string{"readonly_via_field_behavior_field"},
 			},
 		},
 		{
@@ -5076,6 +5112,7 @@ func TestSchemaOfField(t *testing.T) {
 				UniqueItems: true,
 				MaxItems:    20,
 				MinItems:    2,
+				Required:    []string{"array_field_option"},
 			},
 		},
 		{
@@ -5122,6 +5159,7 @@ func TestSchemaOfField(t *testing.T) {
 				UniqueItems: true,
 				MaxItems:    20,
 				MinItems:    2,
+				Required:    []string{"array_field_option"},
 			},
 		},
 		{
@@ -5151,6 +5189,7 @@ func TestSchemaOfField(t *testing.T) {
 						},
 					},
 				},
+				Required: []string{"array_field_format"},
 			},
 		},
 		{
@@ -5743,7 +5782,7 @@ func TestRenderMessagesAsDefinition(t *testing.T) {
 					},
 					Title:       "title",
 					Description: "desc",
-					Required:    []string{"req"},
+					Required:    []string{"req", "aPreviewField", "aVisibleField"},
 					Properties: &openapiSchemaObjectProperties{
 						{
 							Key: "aPreviewField",
@@ -5863,7 +5902,7 @@ func TestRenderMessagesAsDefinition(t *testing.T) {
 					},
 					Title:       "title",
 					Description: "desc",
-					Required:    []string{"req", "aRequiredField"},
+					Required:    []string{"req", "aRequiredField", "aOutputOnlyField"},
 					Properties: &openapiSchemaObjectProperties{
 						{
 							Key: "aRequiredField",
@@ -6010,7 +6049,7 @@ func TestRenderMessagesAsDefinition(t *testing.T) {
 					},
 					Title:       "title",
 					Description: "desc",
-					Required:    nil,
+					Required:    []string{"nested"},
 					Properties: &openapiSchemaObjectProperties{
 						{
 							Key: "nested",
@@ -9919,7 +9958,7 @@ func TestRenderServicesOpenapiRequiredBodyFieldContainingPathParam(t *testing.T)
 		}
 	}
 
-	correctRequiredFields := []string{"book", "libraryId"}
+	correctRequiredFields := []string{"name", "book", "libraryId", "isLatestEdition"}
 	if got, want := definition.Required, correctRequiredFields; !reflect.DeepEqual(got, want) {
 		t.Fatalf("Wrong required fields in body definition, got = %s, want = %s", got, want)
 	}
@@ -10052,6 +10091,7 @@ func TestArrayMessageItemsType(t *testing.T) {
 			schemaCore: schemaCore{
 				Type: "object",
 			},
+			Required: []string{"code", "message", "details"},
 			Properties: &openapiSchemaObjectProperties{
 				keyVal{
 					Key: "code",
@@ -10090,6 +10130,7 @@ func TestArrayMessageItemsType(t *testing.T) {
 			schemaCore: schemaCore{
 				Type: "object",
 			},
+			Required: []string{"children"},
 			Properties: &openapiSchemaObjectProperties{
 				keyVal{
 					Key: "children",
@@ -10111,6 +10152,7 @@ func TestArrayMessageItemsType(t *testing.T) {
 			schemaCore: schemaCore{
 				Type: "object",
 			},
+			Required: []string{"children"},
 			Properties: &openapiSchemaObjectProperties{
 				keyVal{
 					Key: "children",
@@ -10132,6 +10174,7 @@ func TestArrayMessageItemsType(t *testing.T) {
 			schemaCore: schemaCore{
 				Type: "object",
 			},
+			Required: []string{"typeUrl", "value"},
 			Properties: &openapiSchemaObjectProperties{
 				keyVal{
 					Key: "@type",
@@ -10155,7 +10198,7 @@ func TestArrayMessageItemsType(t *testing.T) {
 		t.Errorf("applyTemplate(%#v).%s = %s want to be %s", file, name, is, want)
 	}
 	if want, is, name := expect, result.Definitions, "Produces"; !reflect.DeepEqual(is, want) {
-		t.Errorf("applyTemplate(%#v).%s = %v want to be %v", file, name, is, want)
+		t.Errorf("applyTemplate(%#v).%s = %+v want to be %+v", file, name, is, want)
 	}
 	// If there was a failure, print out the input and the json result for debugging.
 	if t.Failed() {
@@ -10310,9 +10353,9 @@ func TestQueryParameterType(t *testing.T) {
 			Get: &openapiOperationObject{
 				Parameters: openapiParametersObject{
 					{
-						Name:        "Address[string]",
-						In:          "query",
-						Type:        "integer",
+						Name: "Address[string]",
+						In:   "query",
+						Type: "integer",
 					},
 				},
 			},

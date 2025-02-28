@@ -89,6 +89,10 @@ paths:
 definitions:
   examplepbGenerateUnboundMethodsSimpleMessage:
     type: "object"
+    required:
+    - "duration"
+    - "id"
+    - "num"
     properties:
       id:
         type: "string"
@@ -112,6 +116,10 @@ definitions:
     additionalProperties: {}
   rpcStatus:
     type: "object"
+    required:
+    - "code"
+    - "details"
+    - "message"
     properties:
       code:
         type: "integer"

@@ -12,7 +12,7 @@ package generateunboundmethods
 // GenerateUnboundMethodsSimpleMessage represents a simple message sent to the unannotated GenerateUnboundMethodsEchoService service.
 type ExamplepbGenerateUnboundMethodsSimpleMessage struct {
 	// Id represents the message identifier.
-	Id string `json:"id,omitempty"`
-	Num string `json:"num,omitempty"`
-	Duration string `json:"duration,omitempty"`
+	Id       string `json:"id"`
+	Num      string `json:"num"`
+	Duration string `json:"duration"`
 }

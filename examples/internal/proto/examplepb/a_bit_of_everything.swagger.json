@@ -233,13 +233,13 @@
             "name": "singleNested.name",
             "description": "name is nested field.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "singleNested.amount",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
@@ -278,54 +278,54 @@
           {
             "name": "uint64Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "uint64"
           },
           {
             "name": "int32Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int32"
           },
           {
             "name": "fixed64Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "uint64"
           },
           {
             "name": "fixed32Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
           {
             "name": "boolValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "boolean"
           },
           {
             "name": "stringValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "bytesValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "byte"
           },
           {
             "name": "uint32Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
@@ -333,7 +333,7 @@
             "name": "enumValue",
             "description": " - ZERO: ZERO means 0\n - ONE: ONE means 1",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "ZERO",
@@ -344,7 +344,7 @@
           {
             "name": "pathEnumValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "ABC",
@@ -355,7 +355,7 @@
           {
             "name": "nestedPathEnumValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "GHI",
@@ -366,35 +366,35 @@
           {
             "name": "sfixed32Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int32"
           },
           {
             "name": "sfixed64Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "sint32Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int32"
           },
           {
             "name": "sint64Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "repeatedStringValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string"
@@ -404,43 +404,43 @@
           {
             "name": "oneofEmpty",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "object"
           },
           {
             "name": "oneofString",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "mapValue",
             "description": "map of numeric enum",
             "in": "query",
-            "required": false
+            "required": true
           },
           {
             "name": "mappedStringValue",
             "description": "Map of string title\n\nMap of string description.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "mappedNestedValue",
             "in": "query",
-            "required": false
+            "required": true
           },
           {
             "name": "nonConventionalNameValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "timestampValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "date-time"
           },
@@ -448,7 +448,7 @@
             "name": "repeatedEnumValue",
             "description": "repeated enum value. it is comma-separated in query\n\n - ZERO: ZERO means 0\n - ONE: ONE means 1",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string",
@@ -463,7 +463,7 @@
             "name": "repeatedEnumAnnotation",
             "description": "Repeated numeric enum title\n\nRepeated numeric enum description.\n\n - ZERO: ZERO means 0\n - ONE: ONE means 1",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string",
@@ -478,7 +478,7 @@
             "name": "enumValueAnnotation",
             "description": "Numeric enum title\n\nNumeric enum description.\n\n - ZERO: ZERO means 0\n - ONE: ONE means 1",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "ZERO",
@@ -490,7 +490,7 @@
             "name": "repeatedStringAnnotation",
             "description": "Repeated string title\n\nRepeated string description.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string"
@@ -501,20 +501,20 @@
             "name": "nestedAnnotation.name",
             "description": "name is nested field.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "nestedAnnotation.amount",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
           {
             "name": "int64OverrideType",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
@@ -529,7 +529,7 @@
             "name": "outputOnlyStringViaFieldBehaviorAnnotation",
             "description": "mark a field as readonly in Open API definition",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
@@ -542,7 +542,7 @@
             "name": "productId",
             "description": "Test openapiv2 generation of repeated fields\n\nOnly digits are allowed.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string",
@@ -556,7 +556,7 @@
             "name": "optionalStringField",
             "description": "Test openapiv2 generation of required fields with annotation and jsonschema to reproduce",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
@@ -588,35 +588,35 @@
             "name": "trailingOnly",
             "description": "Trailing only",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "trailingOnlyDot",
             "description": "Trailing only dot.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "trailingBoth",
             "description": "Leading both\n\nTrailing both.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "trailingMultiline",
             "description": "Leading multiline\n\nThis is an example of a multi-line comment.\n\nTrailing multiline.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "uuids",
             "description": "Specify a custom format of repeated field items",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string",
@@ -681,7 +681,7 @@
           {
             "name": "singleNested.amount",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
@@ -689,7 +689,7 @@
             "name": "singleNested.ok",
             "description": "DeepEnum description.\n\n - FALSE: FALSE is false.\n - TRUE: TRUE is true.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "FALSE",
@@ -732,54 +732,54 @@
           {
             "name": "uint64Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "uint64"
           },
           {
             "name": "int32Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int32"
           },
           {
             "name": "fixed64Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "uint64"
           },
           {
             "name": "fixed32Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
           {
             "name": "boolValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "boolean"
           },
           {
             "name": "stringValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "bytesValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "byte"
           },
           {
             "name": "uint32Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
@@ -787,7 +787,7 @@
             "name": "enumValue",
             "description": " - ZERO: ZERO means 0\n - ONE: ONE means 1",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "ZERO",
@@ -798,7 +798,7 @@
           {
             "name": "pathEnumValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "ABC",
@@ -809,7 +809,7 @@
           {
             "name": "nestedPathEnumValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "GHI",
@@ -820,35 +820,35 @@
           {
             "name": "sfixed32Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int32"
           },
           {
             "name": "sfixed64Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "sint32Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int32"
           },
           {
             "name": "sint64Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "repeatedStringValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string"
@@ -858,43 +858,43 @@
           {
             "name": "oneofEmpty",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "object"
           },
           {
             "name": "oneofString",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "mapValue",
             "description": "map of numeric enum",
             "in": "query",
-            "required": false
+            "required": true
           },
           {
             "name": "mappedStringValue",
             "description": "Map of string title\n\nMap of string description.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "mappedNestedValue",
             "in": "query",
-            "required": false
+            "required": true
           },
           {
             "name": "nonConventionalNameValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "timestampValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "date-time"
           },
@@ -902,7 +902,7 @@
             "name": "repeatedEnumValue",
             "description": "repeated enum value. it is comma-separated in query\n\n - ZERO: ZERO means 0\n - ONE: ONE means 1",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string",
@@ -917,7 +917,7 @@
             "name": "repeatedEnumAnnotation",
             "description": "Repeated numeric enum title\n\nRepeated numeric enum description.\n\n - ZERO: ZERO means 0\n - ONE: ONE means 1",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string",
@@ -932,7 +932,7 @@
             "name": "enumValueAnnotation",
             "description": "Numeric enum title\n\nNumeric enum description.\n\n - ZERO: ZERO means 0\n - ONE: ONE means 1",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "ZERO",
@@ -944,7 +944,7 @@
             "name": "repeatedStringAnnotation",
             "description": "Repeated string title\n\nRepeated string description.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string"
@@ -954,7 +954,7 @@
           {
             "name": "nestedAnnotation.amount",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
@@ -962,7 +962,7 @@
             "name": "nestedAnnotation.ok",
             "description": "DeepEnum description.\n\n - FALSE: FALSE is false.\n - TRUE: TRUE is true.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "FALSE",
@@ -973,7 +973,7 @@
           {
             "name": "int64OverrideType",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
@@ -988,7 +988,7 @@
             "name": "outputOnlyStringViaFieldBehaviorAnnotation",
             "description": "mark a field as readonly in Open API definition",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
@@ -1001,7 +1001,7 @@
             "name": "productId",
             "description": "Test openapiv2 generation of repeated fields\n\nOnly digits are allowed.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string",
@@ -1015,7 +1015,7 @@
             "name": "optionalStringField",
             "description": "Test openapiv2 generation of required fields with annotation and jsonschema to reproduce",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
@@ -1047,35 +1047,35 @@
             "name": "trailingOnly",
             "description": "Trailing only",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "trailingOnlyDot",
             "description": "Trailing only dot.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "trailingBoth",
             "description": "Leading both\n\nTrailing both.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "trailingMultiline",
             "description": "Leading multiline\n\nThis is an example of a multi-line comment.\n\nTrailing multiline.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "uuids",
             "description": "Specify a custom format of repeated field items",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string",
@@ -1141,7 +1141,10 @@
             "in": "body",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/ABitOfEverythingNested"
+              "$ref": "#/definitions/ABitOfEverythingNested",
+              "required": [
+                "singleNested"
+              ]
             }
           },
           {
@@ -1179,48 +1182,48 @@
           {
             "name": "uint64Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "uint64"
           },
           {
             "name": "int32Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int32"
           },
           {
             "name": "fixed64Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "uint64"
           },
           {
             "name": "fixed32Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
           {
             "name": "boolValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "boolean"
           },
           {
             "name": "bytesValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "byte"
           },
           {
             "name": "uint32Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
@@ -1228,7 +1231,7 @@
             "name": "enumValue",
             "description": " - ZERO: ZERO means 0\n - ONE: ONE means 1",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "ZERO",
@@ -1239,7 +1242,7 @@
           {
             "name": "pathEnumValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "ABC",
@@ -1250,7 +1253,7 @@
           {
             "name": "nestedPathEnumValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "GHI",
@@ -1261,35 +1264,35 @@
           {
             "name": "sfixed32Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int32"
           },
           {
             "name": "sfixed64Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "sint32Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int32"
           },
           {
             "name": "sint64Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "repeatedStringValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string"
@@ -1299,43 +1302,43 @@
           {
             "name": "oneofEmpty",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "object"
           },
           {
             "name": "oneofString",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "mapValue",
             "description": "map of numeric enum",
             "in": "query",
-            "required": false
+            "required": true
           },
           {
             "name": "mappedStringValue",
             "description": "Map of string title\n\nMap of string description.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "mappedNestedValue",
             "in": "query",
-            "required": false
+            "required": true
           },
           {
             "name": "nonConventionalNameValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "timestampValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "date-time"
           },
@@ -1343,7 +1346,7 @@
             "name": "repeatedEnumValue",
             "description": "repeated enum value. it is comma-separated in query\n\n - ZERO: ZERO means 0\n - ONE: ONE means 1",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string",
@@ -1358,7 +1361,7 @@
             "name": "repeatedEnumAnnotation",
             "description": "Repeated numeric enum title\n\nRepeated numeric enum description.\n\n - ZERO: ZERO means 0\n - ONE: ONE means 1",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string",
@@ -1373,7 +1376,7 @@
             "name": "enumValueAnnotation",
             "description": "Numeric enum title\n\nNumeric enum description.\n\n - ZERO: ZERO means 0\n - ONE: ONE means 1",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "ZERO",
@@ -1385,7 +1388,7 @@
             "name": "repeatedStringAnnotation",
             "description": "Repeated string title\n\nRepeated string description.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string"
@@ -1396,13 +1399,13 @@
             "name": "nestedAnnotation.name",
             "description": "name is nested field.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "nestedAnnotation.amount",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
@@ -1410,7 +1413,7 @@
             "name": "nestedAnnotation.ok",
             "description": "DeepEnum description.\n\n - FALSE: FALSE is false.\n - TRUE: TRUE is true.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "FALSE",
@@ -1421,7 +1424,7 @@
           {
             "name": "int64OverrideType",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
@@ -1436,7 +1439,7 @@
             "name": "outputOnlyStringViaFieldBehaviorAnnotation",
             "description": "mark a field as readonly in Open API definition",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
@@ -1449,7 +1452,7 @@
             "name": "productId",
             "description": "Test openapiv2 generation of repeated fields\n\nOnly digits are allowed.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string",
@@ -1463,7 +1466,7 @@
             "name": "optionalStringField",
             "description": "Test openapiv2 generation of required fields with annotation and jsonschema to reproduce",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
@@ -1495,35 +1498,35 @@
             "name": "trailingOnly",
             "description": "Trailing only",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "trailingOnlyDot",
             "description": "Trailing only dot.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "trailingBoth",
             "description": "Leading both\n\nTrailing both.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "trailingMultiline",
             "description": "Leading multiline\n\nThis is an example of a multi-line comment.\n\nTrailing multiline.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "uuids",
             "description": "Specify a custom format of repeated field items",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string",
@@ -1591,13 +1594,13 @@
             "name": "singleNested.name",
             "description": "name is nested field.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "singleNested.amount",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
@@ -1605,7 +1608,7 @@
             "name": "singleNested.ok",
             "description": "DeepEnum description.\n\n - FALSE: FALSE is false.\n - TRUE: TRUE is true.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "FALSE",
@@ -1639,54 +1642,54 @@
           {
             "name": "uint64Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "uint64"
           },
           {
             "name": "int32Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int32"
           },
           {
             "name": "fixed64Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "uint64"
           },
           {
             "name": "fixed32Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
           {
             "name": "boolValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "boolean"
           },
           {
             "name": "stringValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "bytesValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "byte"
           },
           {
             "name": "uint32Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
@@ -1694,7 +1697,7 @@
             "name": "enumValue",
             "description": " - ZERO: ZERO means 0\n - ONE: ONE means 1",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "ZERO",
@@ -1705,7 +1708,7 @@
           {
             "name": "pathEnumValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "ABC",
@@ -1716,7 +1719,7 @@
           {
             "name": "nestedPathEnumValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "GHI",
@@ -1727,35 +1730,35 @@
           {
             "name": "sfixed32Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int32"
           },
           {
             "name": "sfixed64Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "sint32Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int32"
           },
           {
             "name": "sint64Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "repeatedStringValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string"
@@ -1765,43 +1768,43 @@
           {
             "name": "oneofEmpty",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "object"
           },
           {
             "name": "oneofString",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "mapValue",
             "description": "map of numeric enum",
             "in": "query",
-            "required": false
+            "required": true
           },
           {
             "name": "mappedStringValue",
             "description": "Map of string title\n\nMap of string description.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "mappedNestedValue",
             "in": "query",
-            "required": false
+            "required": true
           },
           {
             "name": "nonConventionalNameValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "timestampValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "date-time"
           },
@@ -1809,7 +1812,7 @@
             "name": "repeatedEnumValue",
             "description": "repeated enum value. it is comma-separated in query\n\n - ZERO: ZERO means 0\n - ONE: ONE means 1",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string",
@@ -1824,7 +1827,7 @@
             "name": "repeatedEnumAnnotation",
             "description": "Repeated numeric enum title\n\nRepeated numeric enum description.\n\n - ZERO: ZERO means 0\n - ONE: ONE means 1",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string",
@@ -1839,7 +1842,7 @@
             "name": "enumValueAnnotation",
             "description": "Numeric enum title\n\nNumeric enum description.\n\n - ZERO: ZERO means 0\n - ONE: ONE means 1",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "ZERO",
@@ -1851,7 +1854,7 @@
             "name": "repeatedStringAnnotation",
             "description": "Repeated string title\n\nRepeated string description.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string"
@@ -1862,13 +1865,13 @@
             "name": "nestedAnnotation.name",
             "description": "name is nested field.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "nestedAnnotation.amount",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
@@ -1876,7 +1879,7 @@
             "name": "nestedAnnotation.ok",
             "description": "DeepEnum description.\n\n - FALSE: FALSE is false.\n - TRUE: TRUE is true.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "FALSE",
@@ -1887,7 +1890,7 @@
           {
             "name": "int64OverrideType",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
@@ -1902,7 +1905,7 @@
             "name": "outputOnlyStringViaFieldBehaviorAnnotation",
             "description": "mark a field as readonly in Open API definition",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
@@ -1915,7 +1918,7 @@
             "name": "productId",
             "description": "Test openapiv2 generation of repeated fields\n\nOnly digits are allowed.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string",
@@ -1929,7 +1932,7 @@
             "name": "optionalStringField",
             "description": "Test openapiv2 generation of required fields with annotation and jsonschema to reproduce",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
@@ -1961,35 +1964,35 @@
             "name": "trailingOnly",
             "description": "Trailing only",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "trailingOnlyDot",
             "description": "Trailing only dot.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "trailingBoth",
             "description": "Leading both\n\nTrailing both.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "trailingMultiline",
             "description": "Leading multiline\n\nThis is an example of a multi-line comment.\n\nTrailing multiline.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "uuids",
             "description": "Specify a custom format of repeated field items",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string",
@@ -2202,13 +2205,13 @@
             "name": "singleNested.name",
             "description": "name is nested field.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "singleNested.amount",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
@@ -2216,7 +2219,7 @@
             "name": "singleNested.ok",
             "description": "DeepEnum description.\n\n - FALSE: FALSE is false.\n - TRUE: TRUE is true.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "FALSE",
@@ -2236,14 +2239,14 @@
           {
             "name": "bytesValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "byte"
           },
           {
             "name": "repeatedStringValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string"
@@ -2253,37 +2256,37 @@
           {
             "name": "oneofEmpty",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "object"
           },
           {
             "name": "oneofString",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "mapValue",
             "description": "map of numeric enum",
             "in": "query",
-            "required": false
+            "required": true
           },
           {
             "name": "mappedStringValue",
             "description": "Map of string title\n\nMap of string description.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "mappedNestedValue",
             "in": "query",
-            "required": false
+            "required": true
           },
           {
             "name": "timestampValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "date-time"
           },
@@ -2291,7 +2294,7 @@
             "name": "repeatedEnumValue",
             "description": "repeated enum value. it is comma-separated in query\n\n - ZERO: ZERO means 0\n - ONE: ONE means 1",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string",
@@ -2306,7 +2309,7 @@
             "name": "repeatedEnumAnnotation",
             "description": "Repeated numeric enum title\n\nRepeated numeric enum description.\n\n - ZERO: ZERO means 0\n - ONE: ONE means 1",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string",
@@ -2321,7 +2324,7 @@
             "name": "repeatedStringAnnotation",
             "description": "Repeated string title\n\nRepeated string description.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string"
@@ -2332,13 +2335,13 @@
             "name": "nestedAnnotation.name",
             "description": "name is nested field.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "nestedAnnotation.amount",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
@@ -2346,7 +2349,7 @@
             "name": "nestedAnnotation.ok",
             "description": "DeepEnum description.\n\n - FALSE: FALSE is false.\n - TRUE: TRUE is true.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "FALSE",
@@ -2357,7 +2360,7 @@
           {
             "name": "int64OverrideType",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
@@ -2372,7 +2375,7 @@
             "name": "outputOnlyStringViaFieldBehaviorAnnotation",
             "description": "mark a field as readonly in Open API definition",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
@@ -2385,7 +2388,7 @@
             "name": "productId",
             "description": "Test openapiv2 generation of repeated fields\n\nOnly digits are allowed.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string",
@@ -2399,7 +2402,7 @@
             "name": "optionalStringField",
             "description": "Test openapiv2 generation of required fields with annotation and jsonschema to reproduce",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
@@ -2431,35 +2434,35 @@
             "name": "trailingOnly",
             "description": "Trailing only",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "trailingOnlyDot",
             "description": "Trailing only dot.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "trailingBoth",
             "description": "Leading both\n\nTrailing both.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "trailingMultiline",
             "description": "Leading multiline\n\nThis is an example of a multi-line comment.\n\nTrailing multiline.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "uuids",
             "description": "Specify a custom format of repeated field items",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string",
@@ -2566,13 +2569,13 @@
             "name": "singleNested.name",
             "description": "name is nested field.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "singleNested.amount",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
@@ -2580,7 +2583,7 @@
             "name": "singleNested.ok",
             "description": "DeepEnum description.\n\n - FALSE: FALSE is false.\n - TRUE: TRUE is true.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "FALSE",
@@ -2614,54 +2617,54 @@
           {
             "name": "uint64Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "uint64"
           },
           {
             "name": "int32Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int32"
           },
           {
             "name": "fixed64Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "uint64"
           },
           {
             "name": "fixed32Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
           {
             "name": "boolValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "boolean"
           },
           {
             "name": "stringValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "bytesValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "byte"
           },
           {
             "name": "uint32Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
@@ -2669,7 +2672,7 @@
             "name": "enumValue",
             "description": " - ZERO: ZERO means 0\n - ONE: ONE means 1",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "ZERO",
@@ -2680,7 +2683,7 @@
           {
             "name": "pathEnumValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "ABC",
@@ -2691,7 +2694,7 @@
           {
             "name": "nestedPathEnumValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "GHI",
@@ -2702,35 +2705,35 @@
           {
             "name": "sfixed32Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int32"
           },
           {
             "name": "sfixed64Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "sint32Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int32"
           },
           {
             "name": "sint64Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "repeatedStringValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string"
@@ -2740,43 +2743,43 @@
           {
             "name": "oneofEmpty",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "object"
           },
           {
             "name": "oneofString",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "mapValue",
             "description": "map of numeric enum",
             "in": "query",
-            "required": false
+            "required": true
           },
           {
             "name": "mappedStringValue",
             "description": "Map of string title\n\nMap of string description.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "mappedNestedValue",
             "in": "query",
-            "required": false
+            "required": true
           },
           {
             "name": "nonConventionalNameValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "timestampValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "date-time"
           },
@@ -2784,7 +2787,7 @@
             "name": "repeatedEnumValue",
             "description": "repeated enum value. it is comma-separated in query\n\n - ZERO: ZERO means 0\n - ONE: ONE means 1",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string",
@@ -2799,7 +2802,7 @@
             "name": "repeatedEnumAnnotation",
             "description": "Repeated numeric enum title\n\nRepeated numeric enum description.\n\n - ZERO: ZERO means 0\n - ONE: ONE means 1",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string",
@@ -2814,7 +2817,7 @@
             "name": "enumValueAnnotation",
             "description": "Numeric enum title\n\nNumeric enum description.\n\n - ZERO: ZERO means 0\n - ONE: ONE means 1",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "ZERO",
@@ -2826,7 +2829,7 @@
             "name": "repeatedStringAnnotation",
             "description": "Repeated string title\n\nRepeated string description.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string"
@@ -2837,13 +2840,13 @@
             "name": "nestedAnnotation.name",
             "description": "name is nested field.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "nestedAnnotation.amount",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
@@ -2851,7 +2854,7 @@
             "name": "nestedAnnotation.ok",
             "description": "DeepEnum description.\n\n - FALSE: FALSE is false.\n - TRUE: TRUE is true.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "FALSE",
@@ -2862,7 +2865,7 @@
           {
             "name": "int64OverrideType",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
@@ -2877,7 +2880,7 @@
             "name": "outputOnlyStringViaFieldBehaviorAnnotation",
             "description": "mark a field as readonly in Open API definition",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
@@ -2890,7 +2893,7 @@
             "name": "productId",
             "description": "Test openapiv2 generation of repeated fields\n\nOnly digits are allowed.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string",
@@ -2904,7 +2907,7 @@
             "name": "optionalStringField",
             "description": "Test openapiv2 generation of required fields with annotation and jsonschema to reproduce",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
@@ -2936,35 +2939,35 @@
             "name": "trailingOnly",
             "description": "Trailing only",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "trailingOnlyDot",
             "description": "Trailing only dot.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "trailingBoth",
             "description": "Leading both\n\nTrailing both.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "trailingMultiline",
             "description": "Leading multiline\n\nThis is an example of a multi-line comment.\n\nTrailing multiline.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "uuids",
             "description": "Specify a custom format of repeated field items",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string",
@@ -3007,13 +3010,13 @@
             "name": "singleNested.name",
             "description": "name is nested field.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "singleNested.amount",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
@@ -3021,7 +3024,7 @@
             "name": "singleNested.ok",
             "description": "DeepEnum description.\n\n - FALSE: FALSE is false.\n - TRUE: TRUE is true.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "FALSE",
@@ -3055,54 +3058,54 @@
           {
             "name": "uint64Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "uint64"
           },
           {
             "name": "int32Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int32"
           },
           {
             "name": "fixed64Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "uint64"
           },
           {
             "name": "fixed32Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
           {
             "name": "boolValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "boolean"
           },
           {
             "name": "stringValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "bytesValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "byte"
           },
           {
             "name": "uint32Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
@@ -3110,7 +3113,7 @@
             "name": "enumValue",
             "description": " - ZERO: ZERO means 0\n - ONE: ONE means 1",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "ZERO",
@@ -3121,7 +3124,7 @@
           {
             "name": "pathEnumValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "ABC",
@@ -3132,7 +3135,7 @@
           {
             "name": "nestedPathEnumValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "GHI",
@@ -3143,35 +3146,35 @@
           {
             "name": "sfixed32Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int32"
           },
           {
             "name": "sfixed64Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "sint32Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int32"
           },
           {
             "name": "sint64Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "repeatedStringValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string"
@@ -3181,43 +3184,43 @@
           {
             "name": "oneofEmpty",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "object"
           },
           {
             "name": "oneofString",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "mapValue",
             "description": "map of numeric enum",
             "in": "query",
-            "required": false
+            "required": true
           },
           {
             "name": "mappedStringValue",
             "description": "Map of string title\n\nMap of string description.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "mappedNestedValue",
             "in": "query",
-            "required": false
+            "required": true
           },
           {
             "name": "nonConventionalNameValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "timestampValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "date-time"
           },
@@ -3225,7 +3228,7 @@
             "name": "repeatedEnumValue",
             "description": "repeated enum value. it is comma-separated in query\n\n - ZERO: ZERO means 0\n - ONE: ONE means 1",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string",
@@ -3240,7 +3243,7 @@
             "name": "repeatedEnumAnnotation",
             "description": "Repeated numeric enum title\n\nRepeated numeric enum description.\n\n - ZERO: ZERO means 0\n - ONE: ONE means 1",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string",
@@ -3255,7 +3258,7 @@
             "name": "enumValueAnnotation",
             "description": "Numeric enum title\n\nNumeric enum description.\n\n - ZERO: ZERO means 0\n - ONE: ONE means 1",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "ZERO",
@@ -3267,7 +3270,7 @@
             "name": "repeatedStringAnnotation",
             "description": "Repeated string title\n\nRepeated string description.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string"
@@ -3278,13 +3281,13 @@
             "name": "nestedAnnotation.name",
             "description": "name is nested field.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "nestedAnnotation.amount",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
@@ -3292,7 +3295,7 @@
             "name": "nestedAnnotation.ok",
             "description": "DeepEnum description.\n\n - FALSE: FALSE is false.\n - TRUE: TRUE is true.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "FALSE",
@@ -3303,7 +3306,7 @@
           {
             "name": "int64OverrideType",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
@@ -3318,7 +3321,7 @@
             "name": "outputOnlyStringViaFieldBehaviorAnnotation",
             "description": "mark a field as readonly in Open API definition",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
@@ -3331,7 +3334,7 @@
             "name": "productId",
             "description": "Test openapiv2 generation of repeated fields\n\nOnly digits are allowed.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string",
@@ -3345,7 +3348,7 @@
             "name": "optionalStringField",
             "description": "Test openapiv2 generation of required fields with annotation and jsonschema to reproduce",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
@@ -3377,35 +3380,35 @@
             "name": "trailingOnly",
             "description": "Trailing only",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "trailingOnlyDot",
             "description": "Trailing only dot.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "trailingBoth",
             "description": "Leading both\n\nTrailing both.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "trailingMultiline",
             "description": "Leading multiline\n\nThis is an example of a multi-line comment.\n\nTrailing multiline.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "uuids",
             "description": "Specify a custom format of repeated field items",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string",
@@ -3472,13 +3475,13 @@
             "name": "singleNested.name",
             "description": "name is nested field.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "singleNested.amount",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
@@ -3486,7 +3489,7 @@
             "name": "singleNested.ok",
             "description": "DeepEnum description.\n\n - FALSE: FALSE is false.\n - TRUE: TRUE is true.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "FALSE",
@@ -3520,54 +3523,54 @@
           {
             "name": "uint64Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "uint64"
           },
           {
             "name": "int32Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int32"
           },
           {
             "name": "fixed64Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "uint64"
           },
           {
             "name": "fixed32Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
           {
             "name": "boolValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "boolean"
           },
           {
             "name": "stringValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "bytesValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "byte"
           },
           {
             "name": "uint32Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
@@ -3575,7 +3578,7 @@
             "name": "enumValue",
             "description": " - ZERO: ZERO means 0\n - ONE: ONE means 1",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "ZERO",
@@ -3586,7 +3589,7 @@
           {
             "name": "pathEnumValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "ABC",
@@ -3597,7 +3600,7 @@
           {
             "name": "nestedPathEnumValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "GHI",
@@ -3608,35 +3611,35 @@
           {
             "name": "sfixed32Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int32"
           },
           {
             "name": "sfixed64Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "sint32Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int32"
           },
           {
             "name": "sint64Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "repeatedStringValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string"
@@ -3646,43 +3649,43 @@
           {
             "name": "oneofEmpty",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "object"
           },
           {
             "name": "oneofString",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "mapValue",
             "description": "map of numeric enum",
             "in": "query",
-            "required": false
+            "required": true
           },
           {
             "name": "mappedStringValue",
             "description": "Map of string title\n\nMap of string description.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "mappedNestedValue",
             "in": "query",
-            "required": false
+            "required": true
           },
           {
             "name": "nonConventionalNameValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "timestampValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "date-time"
           },
@@ -3690,7 +3693,7 @@
             "name": "repeatedEnumValue",
             "description": "repeated enum value. it is comma-separated in query\n\n - ZERO: ZERO means 0\n - ONE: ONE means 1",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string",
@@ -3705,7 +3708,7 @@
             "name": "repeatedEnumAnnotation",
             "description": "Repeated numeric enum title\n\nRepeated numeric enum description.\n\n - ZERO: ZERO means 0\n - ONE: ONE means 1",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string",
@@ -3720,7 +3723,7 @@
             "name": "enumValueAnnotation",
             "description": "Numeric enum title\n\nNumeric enum description.\n\n - ZERO: ZERO means 0\n - ONE: ONE means 1",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "ZERO",
@@ -3732,7 +3735,7 @@
             "name": "repeatedStringAnnotation",
             "description": "Repeated string title\n\nRepeated string description.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string"
@@ -3743,13 +3746,13 @@
             "name": "nestedAnnotation.name",
             "description": "name is nested field.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "nestedAnnotation.amount",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
@@ -3757,7 +3760,7 @@
             "name": "nestedAnnotation.ok",
             "description": "DeepEnum description.\n\n - FALSE: FALSE is false.\n - TRUE: TRUE is true.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "FALSE",
@@ -3768,7 +3771,7 @@
           {
             "name": "int64OverrideType",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
@@ -3783,7 +3786,7 @@
             "name": "outputOnlyStringViaFieldBehaviorAnnotation",
             "description": "mark a field as readonly in Open API definition",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
@@ -3796,7 +3799,7 @@
             "name": "productId",
             "description": "Test openapiv2 generation of repeated fields\n\nOnly digits are allowed.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string",
@@ -3810,7 +3813,7 @@
             "name": "optionalStringField",
             "description": "Test openapiv2 generation of required fields with annotation and jsonschema to reproduce",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
@@ -3842,35 +3845,35 @@
             "name": "trailingOnly",
             "description": "Trailing only",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "trailingOnlyDot",
             "description": "Trailing only dot.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "trailingBoth",
             "description": "Leading both\n\nTrailing both.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "trailingMultiline",
             "description": "Leading multiline\n\nThis is an example of a multi-line comment.\n\nTrailing multiline.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "uuids",
             "description": "Specify a custom format of repeated field items",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string",
@@ -3937,13 +3940,13 @@
             "name": "singleNested.name",
             "description": "name is nested field.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "singleNested.amount",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
@@ -3951,7 +3954,7 @@
             "name": "singleNested.ok",
             "description": "DeepEnum description.\n\n - FALSE: FALSE is false.\n - TRUE: TRUE is true.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "FALSE",
@@ -3985,54 +3988,54 @@
           {
             "name": "uint64Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "uint64"
           },
           {
             "name": "int32Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int32"
           },
           {
             "name": "fixed64Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "uint64"
           },
           {
             "name": "fixed32Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
           {
             "name": "boolValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "boolean"
           },
           {
             "name": "stringValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "bytesValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "byte"
           },
           {
             "name": "uint32Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
@@ -4040,7 +4043,7 @@
             "name": "enumValue",
             "description": " - ZERO: ZERO means 0\n - ONE: ONE means 1",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "ZERO",
@@ -4051,7 +4054,7 @@
           {
             "name": "pathEnumValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "ABC",
@@ -4062,7 +4065,7 @@
           {
             "name": "nestedPathEnumValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "GHI",
@@ -4073,35 +4076,35 @@
           {
             "name": "sfixed32Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int32"
           },
           {
             "name": "sfixed64Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "sint32Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int32"
           },
           {
             "name": "sint64Value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "repeatedStringValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string"
@@ -4111,43 +4114,43 @@
           {
             "name": "oneofEmpty",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "object"
           },
           {
             "name": "oneofString",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "mapValue",
             "description": "map of numeric enum",
             "in": "query",
-            "required": false
+            "required": true
           },
           {
             "name": "mappedStringValue",
             "description": "Map of string title\n\nMap of string description.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "mappedNestedValue",
             "in": "query",
-            "required": false
+            "required": true
           },
           {
             "name": "nonConventionalNameValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "timestampValue",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "date-time"
           },
@@ -4155,7 +4158,7 @@
             "name": "repeatedEnumValue",
             "description": "repeated enum value. it is comma-separated in query\n\n - ZERO: ZERO means 0\n - ONE: ONE means 1",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string",
@@ -4170,7 +4173,7 @@
             "name": "repeatedEnumAnnotation",
             "description": "Repeated numeric enum title\n\nRepeated numeric enum description.\n\n - ZERO: ZERO means 0\n - ONE: ONE means 1",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string",
@@ -4185,7 +4188,7 @@
             "name": "enumValueAnnotation",
             "description": "Numeric enum title\n\nNumeric enum description.\n\n - ZERO: ZERO means 0\n - ONE: ONE means 1",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "ZERO",
@@ -4197,7 +4200,7 @@
             "name": "repeatedStringAnnotation",
             "description": "Repeated string title\n\nRepeated string description.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string"
@@ -4208,13 +4211,13 @@
             "name": "nestedAnnotation.name",
             "description": "name is nested field.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "nestedAnnotation.amount",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
@@ -4222,7 +4225,7 @@
             "name": "nestedAnnotation.ok",
             "description": "DeepEnum description.\n\n - FALSE: FALSE is false.\n - TRUE: TRUE is true.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "FALSE",
@@ -4233,7 +4236,7 @@
           {
             "name": "int64OverrideType",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
@@ -4248,7 +4251,7 @@
             "name": "outputOnlyStringViaFieldBehaviorAnnotation",
             "description": "mark a field as readonly in Open API definition",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
@@ -4261,7 +4264,7 @@
             "name": "productId",
             "description": "Test openapiv2 generation of repeated fields\n\nOnly digits are allowed.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string",
@@ -4275,7 +4278,7 @@
             "name": "optionalStringField",
             "description": "Test openapiv2 generation of required fields with annotation and jsonschema to reproduce",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
@@ -4307,35 +4310,35 @@
             "name": "trailingOnly",
             "description": "Trailing only",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "trailingOnlyDot",
             "description": "Trailing only dot.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "trailingBoth",
             "description": "Leading both\n\nTrailing both.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "trailingMultiline",
             "description": "Leading multiline\n\nThis is an example of a multi-line comment.\n\nTrailing multiline.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "uuids",
             "description": "Specify a custom format of repeated field items",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "array",
             "items": {
               "type": "string",
@@ -4859,7 +4862,10 @@
             "in": "body",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/oneofenumExampleEnum"
+              "$ref": "#/definitions/oneofenumExampleEnum",
+              "required": [
+                "exampleEnum"
+              ]
             }
           }
         ],
@@ -5073,6 +5079,8 @@
               "description": "The book's `name` field is used to identify the book to be updated.\nFormat: publishers/{publisher}/books/{book}",
               "title": "The book to update.",
               "required": [
+                "id",
+                "createTime",
                 "book"
               ]
             }
@@ -5081,7 +5089,7 @@
             "name": "allowMissing",
             "description": "If set to true, and the book is not found, a new book will be created.\nIn this situation, `update_mask` is ignored.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "boolean"
           }
         ],
@@ -5146,14 +5154,17 @@
             "in": "body",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/examplepbBook"
+              "$ref": "#/definitions/examplepbBook",
+              "required": [
+                "book"
+              ]
             }
           },
           {
             "name": "bookId",
             "description": "The ID to use for the book.\n\nThis must start with an alphanumeric character.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           }
         ],
@@ -5464,14 +5475,55 @@
                 "url": "https://github.com/grpc-ecosystem/grpc-gateway"
               },
               "required": [
-                "int64Value",
-                "doubleValue",
-                "required_field_schema_json_name_custom",
+                "singleNested",
+                "nested",
                 "floatValue",
+                "doubleValue",
+                "int64Value",
+                "uint64Value",
+                "int32Value",
+                "fixed64Value",
+                "fixed32Value",
+                "boolValue",
+                "stringValue",
+                "bytesValue",
+                "uint32Value",
+                "enumValue",
+                "pathEnumValue",
+                "nestedPathEnumValue",
+                "sfixed32Value",
+                "sfixed64Value",
+                "sint32Value",
+                "sint64Value",
+                "repeatedStringValue",
+                "oneofEmpty",
+                "oneofString",
+                "mapValue",
+                "mappedStringValue",
+                "mappedNestedValue",
+                "nonConventionalNameValue",
+                "timestampValue",
+                "repeatedEnumValue",
+                "repeatedEnumAnnotation",
+                "enumValueAnnotation",
+                "repeatedStringAnnotation",
+                "repeatedNestedAnnotation",
+                "nestedAnnotation",
+                "int64OverrideType",
                 "requiredStringViaFieldBehaviorAnnotation",
+                "outputOnlyStringViaFieldBehaviorAnnotation",
+                "productId",
+                "optionalStringField",
                 "requiredStringField1",
                 "requiredStringField2",
-                "required_field_behavior_json_name_custom"
+                "required_field_behavior_json_name_custom",
+                "required_field_schema_json_name_custom",
+                "trailingOnly",
+                "trailingOnlyDot",
+                "trailingBoth",
+                "trailingMultiline",
+                "uuids",
+                "abe"
               ],
               "x-a-bit-of-everything-foo": "bar"
             }
@@ -5480,7 +5532,7 @@
             "name": "updateMask",
             "description": "The paths to update.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           }
         ],
@@ -5789,14 +5841,55 @@
                 "url": "https://github.com/grpc-ecosystem/grpc-gateway"
               },
               "required": [
-                "int64Value",
-                "doubleValue",
-                "required_field_schema_json_name_custom",
+                "singleNested",
+                "nested",
                 "floatValue",
+                "doubleValue",
+                "int64Value",
+                "uint64Value",
+                "int32Value",
+                "fixed64Value",
+                "fixed32Value",
+                "boolValue",
+                "stringValue",
+                "bytesValue",
+                "uint32Value",
+                "enumValue",
+                "pathEnumValue",
+                "nestedPathEnumValue",
+                "sfixed32Value",
+                "sfixed64Value",
+                "sint32Value",
+                "sint64Value",
+                "repeatedStringValue",
+                "oneofEmpty",
+                "oneofString",
+                "mapValue",
+                "mappedStringValue",
+                "mappedNestedValue",
+                "nonConventionalNameValue",
+                "timestampValue",
+                "repeatedEnumValue",
+                "repeatedEnumAnnotation",
+                "enumValueAnnotation",
+                "repeatedStringAnnotation",
+                "repeatedNestedAnnotation",
+                "nestedAnnotation",
+                "int64OverrideType",
                 "requiredStringViaFieldBehaviorAnnotation",
+                "outputOnlyStringViaFieldBehaviorAnnotation",
+                "productId",
+                "optionalStringField",
                 "requiredStringField1",
                 "requiredStringField2",
-                "required_field_behavior_json_name_custom"
+                "required_field_behavior_json_name_custom",
+                "required_field_schema_json_name_custom",
+                "trailingOnly",
+                "trailingOnlyDot",
+                "trailingBoth",
+                "trailingMultiline",
+                "uuids",
+                "abe"
               ],
               "x-a-bit-of-everything-foo": "bar"
             }
@@ -5863,7 +5956,7 @@
           {
             "name": "value",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           }
         ],
@@ -5932,7 +6025,10 @@
             "in": "body",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "required": [
+                "value"
+              ]
             }
           }
         ],
@@ -6305,7 +6401,10 @@
             "in": "body",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/examplepbBody"
+              "$ref": "#/definitions/examplepbBody",
+              "required": [
+                "data"
+              ]
             }
           }
         ],
@@ -6515,7 +6614,12 @@
           "description": "DeepEnum description."
         }
       },
-      "description": "Nested is nested type."
+      "description": "Nested is nested type.",
+      "required": [
+        "name",
+        "amount",
+        "ok"
+      ]
     },
     "ABitOfEverythingServiceDeepPathEchoBody": {
       "type": "object",
@@ -6785,15 +6889,57 @@
         "url": "https://github.com/grpc-ecosystem/grpc-gateway"
       },
       "required": [
+        "amount",
+        "ok",
+        "singleNested",
         "uuid",
-        "int64Value",
-        "doubleValue",
-        "required_field_schema_json_name_custom",
+        "nested",
         "floatValue",
+        "doubleValue",
+        "int64Value",
+        "uint64Value",
+        "int32Value",
+        "fixed64Value",
+        "fixed32Value",
+        "boolValue",
+        "stringValue",
+        "bytesValue",
+        "uint32Value",
+        "enumValue",
+        "pathEnumValue",
+        "nestedPathEnumValue",
+        "sfixed32Value",
+        "sfixed64Value",
+        "sint32Value",
+        "sint64Value",
+        "repeatedStringValue",
+        "oneofEmpty",
+        "oneofString",
+        "mapValue",
+        "mappedStringValue",
+        "mappedNestedValue",
+        "nonConventionalNameValue",
+        "timestampValue",
+        "repeatedEnumValue",
+        "repeatedEnumAnnotation",
+        "enumValueAnnotation",
+        "repeatedStringAnnotation",
+        "repeatedNestedAnnotation",
+        "nestedAnnotation",
+        "int64OverrideType",
         "requiredStringViaFieldBehaviorAnnotation",
+        "outputOnlyStringViaFieldBehaviorAnnotation",
+        "productId",
+        "optionalStringField",
         "requiredStringField1",
         "requiredStringField2",
-        "required_field_behavior_json_name_custom"
+        "required_field_behavior_json_name_custom",
+        "required_field_schema_json_name_custom",
+        "trailingOnly",
+        "trailingOnlyDot",
+        "trailingBoth",
+        "trailingMultiline",
+        "uuids"
       ],
       "x-a-bit-of-everything-foo": "bar"
     },
@@ -7058,14 +7204,56 @@
       },
       "title": "UpdateV2Request request for update includes the message and the update mask",
       "required": [
-        "int64Value",
-        "doubleValue",
-        "required_field_schema_json_name_custom",
+        "singleNested",
+        "nested",
         "floatValue",
+        "doubleValue",
+        "int64Value",
+        "uint64Value",
+        "int32Value",
+        "fixed64Value",
+        "fixed32Value",
+        "boolValue",
+        "stringValue",
+        "bytesValue",
+        "uint32Value",
+        "enumValue",
+        "pathEnumValue",
+        "nestedPathEnumValue",
+        "sfixed32Value",
+        "sfixed64Value",
+        "sint32Value",
+        "sint64Value",
+        "repeatedStringValue",
+        "oneofEmpty",
+        "oneofString",
+        "mapValue",
+        "mappedStringValue",
+        "mappedNestedValue",
+        "nonConventionalNameValue",
+        "timestampValue",
+        "repeatedEnumValue",
+        "repeatedEnumAnnotation",
+        "enumValueAnnotation",
+        "repeatedStringAnnotation",
+        "repeatedNestedAnnotation",
+        "nestedAnnotation",
+        "int64OverrideType",
         "requiredStringViaFieldBehaviorAnnotation",
+        "outputOnlyStringViaFieldBehaviorAnnotation",
+        "productId",
+        "optionalStringField",
         "requiredStringField1",
         "requiredStringField2",
-        "required_field_behavior_json_name_custom"
+        "required_field_behavior_json_name_custom",
+        "required_field_schema_json_name_custom",
+        "trailingOnly",
+        "trailingOnlyDot",
+        "trailingBoth",
+        "trailingMultiline",
+        "uuids",
+        "abe",
+        "updateMask"
       ]
     },
     "MessagePathEnumNestedPathEnum": {
@@ -7339,15 +7527,55 @@
         "url": "https://github.com/grpc-ecosystem/grpc-gateway"
       },
       "required": [
+        "singleNested",
         "uuid",
-        "int64Value",
-        "doubleValue",
-        "required_field_schema_json_name_custom",
+        "nested",
         "floatValue",
+        "doubleValue",
+        "int64Value",
+        "uint64Value",
+        "int32Value",
+        "fixed64Value",
+        "fixed32Value",
+        "boolValue",
+        "stringValue",
+        "bytesValue",
+        "uint32Value",
+        "enumValue",
+        "pathEnumValue",
+        "nestedPathEnumValue",
+        "sfixed32Value",
+        "sfixed64Value",
+        "sint32Value",
+        "sint64Value",
+        "repeatedStringValue",
+        "oneofEmpty",
+        "oneofString",
+        "mapValue",
+        "mappedStringValue",
+        "mappedNestedValue",
+        "nonConventionalNameValue",
+        "timestampValue",
+        "repeatedEnumValue",
+        "repeatedEnumAnnotation",
+        "enumValueAnnotation",
+        "repeatedStringAnnotation",
+        "repeatedNestedAnnotation",
+        "nestedAnnotation",
+        "int64OverrideType",
         "requiredStringViaFieldBehaviorAnnotation",
+        "outputOnlyStringViaFieldBehaviorAnnotation",
+        "productId",
+        "optionalStringField",
         "requiredStringField1",
         "requiredStringField2",
-        "required_field_behavior_json_name_custom"
+        "required_field_behavior_json_name_custom",
+        "required_field_schema_json_name_custom",
+        "trailingOnly",
+        "trailingOnlyDot",
+        "trailingBoth",
+        "trailingMultiline",
+        "uuids"
       ],
       "x-a-bit-of-everything-foo": "bar"
     },
@@ -7478,7 +7706,25 @@
           }
         }
       },
-      "title": "ABitOfEverythingRepeated is used to validate repeated path parameter functionality"
+      "title": "ABitOfEverythingRepeated is used to validate repeated path parameter functionality",
+      "required": [
+        "pathRepeatedFloatValue",
+        "pathRepeatedDoubleValue",
+        "pathRepeatedInt64Value",
+        "pathRepeatedUint64Value",
+        "pathRepeatedInt32Value",
+        "pathRepeatedFixed64Value",
+        "pathRepeatedFixed32Value",
+        "pathRepeatedBoolValue",
+        "pathRepeatedStringValue",
+        "pathRepeatedBytesValue",
+        "pathRepeatedUint32Value",
+        "pathRepeatedEnumValue",
+        "pathRepeatedSfixed32Value",
+        "pathRepeatedSfixed64Value",
+        "pathRepeatedSint32Value",
+        "pathRepeatedSint64Value"
+      ]
     },
     "examplepbABitOfEverythingServiceUpdateBody": {
       "type": "object",
@@ -7727,14 +7973,54 @@
         "url": "https://github.com/grpc-ecosystem/grpc-gateway"
       },
       "required": [
-        "int64Value",
-        "doubleValue",
-        "required_field_schema_json_name_custom",
+        "singleNested",
+        "nested",
         "floatValue",
+        "doubleValue",
+        "int64Value",
+        "uint64Value",
+        "int32Value",
+        "fixed64Value",
+        "fixed32Value",
+        "boolValue",
+        "stringValue",
+        "bytesValue",
+        "uint32Value",
+        "enumValue",
+        "pathEnumValue",
+        "nestedPathEnumValue",
+        "sfixed32Value",
+        "sfixed64Value",
+        "sint32Value",
+        "sint64Value",
+        "repeatedStringValue",
+        "oneofEmpty",
+        "oneofString",
+        "mapValue",
+        "mappedStringValue",
+        "mappedNestedValue",
+        "nonConventionalNameValue",
+        "timestampValue",
+        "repeatedEnumValue",
+        "repeatedEnumAnnotation",
+        "enumValueAnnotation",
+        "repeatedStringAnnotation",
+        "repeatedNestedAnnotation",
+        "nestedAnnotation",
+        "int64OverrideType",
         "requiredStringViaFieldBehaviorAnnotation",
+        "outputOnlyStringViaFieldBehaviorAnnotation",
+        "productId",
+        "optionalStringField",
         "requiredStringField1",
         "requiredStringField2",
-        "required_field_behavior_json_name_custom"
+        "required_field_behavior_json_name_custom",
+        "required_field_schema_json_name_custom",
+        "trailingOnly",
+        "trailingOnlyDot",
+        "trailingBoth",
+        "trailingMultiline",
+        "uuids"
       ],
       "x-a-bit-of-everything-foo": "bar"
     },
@@ -7755,7 +8041,10 @@
         "name": {
           "type": "string"
         }
-      }
+      },
+      "required": [
+        "name"
+      ]
     },
     "examplepbBook": {
       "type": "object",
@@ -7776,7 +8065,12 @@
           "readOnly": true
         }
       },
-      "description": "An example resource type from AIP-123 used to test the behavior described in\nthe CreateBookRequest message.\n\nSee: https://google.aip.dev/123"
+      "description": "An example resource type from AIP-123 used to test the behavior described in\nthe CreateBookRequest message.\n\nSee: https://google.aip.dev/123",
+      "required": [
+        "name",
+        "id",
+        "createTime"
+      ]
     },
     "examplepbCheckStatusResponse": {
       "type": "object",
@@ -7784,7 +8078,10 @@
         "status": {
           "$ref": "#/definitions/rpcStatus"
         }
-      }
+      },
+      "required": [
+        "status"
+      ]
     },
     "examplepbErrorObject": {
       "type": "object",
@@ -7802,7 +8099,11 @@
           "title": "message",
           "pattern": "^[a-zA-Z0-9]{1, 32}$"
         }
-      }
+      },
+      "required": [
+        "code",
+        "message"
+      ]
     },
     "examplepbErrorResponse": {
       "type": "object",
@@ -7818,7 +8119,11 @@
         "error": {
           "$ref": "#/definitions/examplepbErrorObject"
         }
-      }
+      },
+      "required": [
+        "correlationId",
+        "error"
+      ]
     },
     "examplepbNumericEnum": {
       "type": "string",
@@ -7910,7 +8215,11 @@
         }
       },
       "additionalProperties": {},
-      "description": "`Any` contains an arbitrary serialized protocol buffer message along with a\nURL that describes the type of the serialized message.\n\nProtobuf library provides support to pack/unpack Any values in the form\nof utility functions or additional generated methods of the Any type.\n\nExample 1: Pack and unpack a message in C++.\n\n    Foo foo = ...;\n    Any any;\n    any.PackFrom(foo);\n    ...\n    if (any.UnpackTo(\u0026foo)) {\n      ...\n    }\n\nExample 2: Pack and unpack a message in Java.\n\n    Foo foo = ...;\n    Any any = Any.pack(foo);\n    ...\n    if (any.is(Foo.class)) {\n      foo = any.unpack(Foo.class);\n    }\n    // or ...\n    if (any.isSameTypeAs(Foo.getDefaultInstance())) {\n      foo = any.unpack(Foo.getDefaultInstance());\n    }\n\n Example 3: Pack and unpack a message in Python.\n\n    foo = Foo(...)\n    any = Any()\n    any.Pack(foo)\n    ...\n    if any.Is(Foo.DESCRIPTOR):\n      any.Unpack(foo)\n      ...\n\n Example 4: Pack and unpack a message in Go\n\n     foo := \u0026pb.Foo{...}\n     any, err := anypb.New(foo)\n     if err != nil {\n       ...\n     }\n     ...\n     foo := \u0026pb.Foo{}\n     if err := any.UnmarshalTo(foo); err != nil {\n       ...\n     }\n\nThe pack methods provided by protobuf library will by default use\n'type.googleapis.com/full.type.name' as the type URL and the unpack\nmethods only use the fully qualified type name after the last '/'\nin the type URL, for example \"foo.bar.com/x/y.z\" will yield type\nname \"y.z\".\n\nJSON\n====\nThe JSON representation of an `Any` value uses the regular\nrepresentation of the deserialized, embedded message, with an\nadditional field `@type` which contains the type URL. Example:\n\n    package google.profile;\n    message Person {\n      string first_name = 1;\n      string last_name = 2;\n    }\n\n    {\n      \"@type\": \"type.googleapis.com/google.profile.Person\",\n      \"firstName\": \u003cstring\u003e,\n      \"lastName\": \u003cstring\u003e\n    }\n\nIf the embedded message type is well-known and has a custom JSON\nrepresentation, that representation will be embedded adding a field\n`value` which holds the custom JSON in addition to the `@type`\nfield. Example (for message [google.protobuf.Duration][]):\n\n    {\n      \"@type\": \"type.googleapis.com/google.protobuf.Duration\",\n      \"value\": \"1.212s\"\n    }"
+      "description": "`Any` contains an arbitrary serialized protocol buffer message along with a\nURL that describes the type of the serialized message.\n\nProtobuf library provides support to pack/unpack Any values in the form\nof utility functions or additional generated methods of the Any type.\n\nExample 1: Pack and unpack a message in C++.\n\n    Foo foo = ...;\n    Any any;\n    any.PackFrom(foo);\n    ...\n    if (any.UnpackTo(\u0026foo)) {\n      ...\n    }\n\nExample 2: Pack and unpack a message in Java.\n\n    Foo foo = ...;\n    Any any = Any.pack(foo);\n    ...\n    if (any.is(Foo.class)) {\n      foo = any.unpack(Foo.class);\n    }\n    // or ...\n    if (any.isSameTypeAs(Foo.getDefaultInstance())) {\n      foo = any.unpack(Foo.getDefaultInstance());\n    }\n\n Example 3: Pack and unpack a message in Python.\n\n    foo = Foo(...)\n    any = Any()\n    any.Pack(foo)\n    ...\n    if any.Is(Foo.DESCRIPTOR):\n      any.Unpack(foo)\n      ...\n\n Example 4: Pack and unpack a message in Go\n\n     foo := \u0026pb.Foo{...}\n     any, err := anypb.New(foo)\n     if err != nil {\n       ...\n     }\n     ...\n     foo := \u0026pb.Foo{}\n     if err := any.UnmarshalTo(foo); err != nil {\n       ...\n     }\n\nThe pack methods provided by protobuf library will by default use\n'type.googleapis.com/full.type.name' as the type URL and the unpack\nmethods only use the fully qualified type name after the last '/'\nin the type URL, for example \"foo.bar.com/x/y.z\" will yield type\nname \"y.z\".\n\nJSON\n====\nThe JSON representation of an `Any` value uses the regular\nrepresentation of the deserialized, embedded message, with an\nadditional field `@type` which contains the type URL. Example:\n\n    package google.profile;\n    message Person {\n      string first_name = 1;\n      string last_name = 2;\n    }\n\n    {\n      \"@type\": \"type.googleapis.com/google.profile.Person\",\n      \"firstName\": \u003cstring\u003e,\n      \"lastName\": \u003cstring\u003e\n    }\n\nIf the embedded message type is well-known and has a custom JSON\nrepresentation, that representation will be embedded adding a field\n`value` which holds the custom JSON in addition to the `@type`\nfield. Example (for message [google.protobuf.Duration][]):\n\n    {\n      \"@type\": \"type.googleapis.com/google.protobuf.Duration\",\n      \"value\": \"1.212s\"\n    }",
+      "required": [
+        "typeUrl",
+        "value"
+      ]
     },
     "protoexamplepbFoo": {
       "type": "object",
@@ -7944,7 +8253,12 @@
           "description": "A list of messages that carry the error details.  There is a common set of\nmessage types for APIs to use."
         }
       },
-      "description": "The `Status` type defines a logical error model that is suitable for\ndifferent programming environments, including REST APIs and RPC APIs. It is\nused by [gRPC](https://github.com/grpc). Each `Status` message contains\nthree pieces of data: error code, error message, and error details.\n\nYou can find out more about this error model and how to work with it in the\n[API Design Guide](https://cloud.google.com/apis/design/errors)."
+      "description": "The `Status` type defines a logical error model that is suitable for\ndifferent programming environments, including REST APIs and RPC APIs. It is\nused by [gRPC](https://github.com/grpc). Each `Status` message contains\nthree pieces of data: error code, error message, and error details.\n\nYou can find out more about this error model and how to work with it in the\n[API Design Guide](https://cloud.google.com/apis/design/errors).",
+      "required": [
+        "code",
+        "message",
+        "details"
+      ]
     },
     "subStringMessage": {
       "type": "object",
@@ -7952,7 +8266,10 @@
         "value": {
           "type": "string"
         }
-      }
+      },
+      "required": [
+        "value"
+      ]
     }
   },
   "securityDefinitions": {

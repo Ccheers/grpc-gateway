@@ -69,74 +69,63 @@ paths:
         x-exportParamName: "Num"
       - name: "duration"
         in: "query"
-        required: false
+        required: true
         type: "string"
         x-exportParamName: "Duration"
-        x-optionalDataType: "String"
       - name: "lineNum"
         in: "query"
-        required: false
+        required: true
         type: "string"
         format: "int64"
         x-exportParamName: "LineNum"
-        x-optionalDataType: "String"
       - name: "lang"
         in: "query"
-        required: false
+        required: true
         type: "string"
         x-exportParamName: "Lang"
-        x-optionalDataType: "String"
       - name: "status.progress"
         in: "query"
-        required: false
+        required: true
         type: "string"
         format: "int64"
         x-exportParamName: "StatusProgress"
-        x-optionalDataType: "String"
       - name: "status.note"
         in: "query"
-        required: false
+        required: true
         type: "string"
         x-exportParamName: "StatusNote"
-        x-optionalDataType: "String"
       - name: "en"
         in: "query"
-        required: false
+        required: true
         type: "string"
         format: "int64"
         x-exportParamName: "En"
-        x-optionalDataType: "String"
       - name: "no.progress"
         in: "query"
-        required: false
+        required: true
         type: "string"
         format: "int64"
         x-exportParamName: "NoProgress"
-        x-optionalDataType: "String"
       - name: "no.note"
         in: "query"
-        required: false
+        required: true
         type: "string"
         x-exportParamName: "NoNote"
-        x-optionalDataType: "String"
       - name: "resourceId"
         in: "query"
-        required: false
+        required: true
         type: "string"
         x-exportParamName: "ResourceId"
-        x-optionalDataType: "String"
       - name: "nId.nId"
         in: "query"
-        required: false
+        required: true
         type: "string"
         x-exportParamName: "NIdNId"
-        x-optionalDataType: "String"
       - name: "nId.val"
         in: "query"
-        required: false
+        required: true
         type: "string"
         x-exportParamName: "NIdVal"
-        x-optionalDataType: "String"
       responses:
         200:
           description: "A successful response."
@@ -189,74 +178,63 @@ paths:
         x-exportParamName: "Num"
       - name: "duration"
         in: "query"
-        required: false
+        required: true
         type: "string"
         x-exportParamName: "Duration"
-        x-optionalDataType: "String"
       - name: "lineNum"
         in: "query"
-        required: false
+        required: true
         type: "string"
         format: "int64"
         x-exportParamName: "LineNum"
-        x-optionalDataType: "String"
       - name: "lang"
         in: "query"
-        required: false
+        required: true
         type: "string"
         x-exportParamName: "Lang"
-        x-optionalDataType: "String"
       - name: "status.progress"
         in: "query"
-        required: false
+        required: true
         type: "string"
         format: "int64"
         x-exportParamName: "StatusProgress"
-        x-optionalDataType: "String"
       - name: "status.note"
         in: "query"
-        required: false
+        required: true
         type: "string"
         x-exportParamName: "StatusNote"
-        x-optionalDataType: "String"
       - name: "en"
         in: "query"
-        required: false
+        required: true
         type: "string"
         format: "int64"
         x-exportParamName: "En"
-        x-optionalDataType: "String"
       - name: "no.progress"
         in: "query"
-        required: false
+        required: true
         type: "string"
         format: "int64"
         x-exportParamName: "NoProgress"
-        x-optionalDataType: "String"
       - name: "no.note"
         in: "query"
-        required: false
+        required: true
         type: "string"
         x-exportParamName: "NoNote"
-        x-optionalDataType: "String"
       - name: "resourceId"
         in: "query"
-        required: false
+        required: true
         type: "string"
         x-exportParamName: "ResourceId"
-        x-optionalDataType: "String"
       - name: "nId.nId"
         in: "query"
-        required: false
+        required: true
         type: "string"
         x-exportParamName: "NIdNId"
-        x-optionalDataType: "String"
       - name: "nId.val"
         in: "query"
-        required: false
+        required: true
         type: "string"
         x-exportParamName: "NIdVal"
-        x-optionalDataType: "String"
       responses:
         200:
           description: "A successful response."
@@ -327,10 +305,9 @@ paths:
       - name: "id"
         in: "query"
         description: "Id represents the message identifier."
-        required: false
+        required: true
         type: "string"
         x-exportParamName: "Id"
-        x-optionalDataType: "String"
       - name: "num"
         in: "query"
         description: "Int value field"
@@ -341,74 +318,63 @@ paths:
         x-exportParamName: "Num"
       - name: "duration"
         in: "query"
-        required: false
+        required: true
         type: "string"
         x-exportParamName: "Duration"
-        x-optionalDataType: "String"
       - name: "lineNum"
         in: "query"
-        required: false
+        required: true
         type: "string"
         format: "int64"
         x-exportParamName: "LineNum"
-        x-optionalDataType: "String"
       - name: "lang"
         in: "query"
-        required: false
+        required: true
         type: "string"
         x-exportParamName: "Lang"
-        x-optionalDataType: "String"
       - name: "status.progress"
         in: "query"
-        required: false
+        required: true
         type: "string"
         format: "int64"
         x-exportParamName: "StatusProgress"
-        x-optionalDataType: "String"
       - name: "status.note"
         in: "query"
-        required: false
+        required: true
         type: "string"
         x-exportParamName: "StatusNote"
-        x-optionalDataType: "String"
       - name: "en"
         in: "query"
-        required: false
+        required: true
         type: "string"
         format: "int64"
         x-exportParamName: "En"
-        x-optionalDataType: "String"
       - name: "no.progress"
         in: "query"
-        required: false
+        required: true
         type: "string"
         format: "int64"
         x-exportParamName: "NoProgress"
-        x-optionalDataType: "String"
       - name: "no.note"
         in: "query"
-        required: false
+        required: true
         type: "string"
         x-exportParamName: "NoNote"
-        x-optionalDataType: "String"
       - name: "resourceId"
         in: "query"
-        required: false
+        required: true
         type: "string"
         x-exportParamName: "ResourceId"
-        x-optionalDataType: "String"
       - name: "nId.nId"
         in: "query"
-        required: false
+        required: true
         type: "string"
         x-exportParamName: "NIdNId"
-        x-optionalDataType: "String"
       - name: "nId.val"
         in: "query"
-        required: false
+        required: true
         type: "string"
         x-exportParamName: "NIdVal"
-        x-optionalDataType: "String"
       responses:
         200:
           description: "A successful response."
@@ -441,6 +407,9 @@ securityDefinitions:
 definitions:
   examplepbUnannotatedEmbedded:
     type: "object"
+    required:
+    - "note"
+    - "progress"
     properties:
       progress:
         type: "string"
@@ -450,6 +419,9 @@ definitions:
     description: "Embedded represents a message embedded in SimpleMessage."
   examplepbUnannotatedNestedMessage:
     type: "object"
+    required:
+    - "nId"
+    - "val"
     properties:
       nId:
         type: "string"
@@ -458,8 +430,16 @@ definitions:
   examplepbUnannotatedSimpleMessage:
     type: "object"
     required:
+    - "duration"
+    - "en"
     - "id"
+    - "lang"
+    - "lineNum"
+    - "nId"
+    - "no"
     - "num"
+    - "resourceId"
+    - "status"
     properties:
       id:
         type: "string"
@@ -502,6 +482,10 @@ definitions:
     additionalProperties: {}
   rpcStatus:
     type: "object"
+    required:
+    - "code"
+    - "details"
+    - "message"
     properties:
       code:
         type: "integer"

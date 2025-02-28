@@ -10,6 +10,6 @@
 package echo
 
 type ExamplepbNestedMessage struct {
-	NId string `json:"nId,omitempty"`
-	Val string `json:"val,omitempty"`
+	NId string `json:"nId"`
+	Val string `json:"val"`
 }

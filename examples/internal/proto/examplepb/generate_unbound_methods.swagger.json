@@ -137,7 +137,12 @@
           "type": "string"
         }
       },
-      "description": "GenerateUnboundMethodsSimpleMessage represents a simple message sent to the unannotated GenerateUnboundMethodsEchoService service."
+      "description": "GenerateUnboundMethodsSimpleMessage represents a simple message sent to the unannotated GenerateUnboundMethodsEchoService service.",
+      "required": [
+        "id",
+        "num",
+        "duration"
+      ]
     },
     "protobufAny": {
       "type": "object",
@@ -146,7 +151,11 @@
           "type": "string"
         }
       },
-      "additionalProperties": {}
+      "additionalProperties": {},
+      "required": [
+        "typeUrl",
+        "value"
+      ]
     },
     "rpcStatus": {
       "type": "object",
@@ -165,7 +174,12 @@
             "$ref": "#/definitions/protobufAny"
           }
         }
-      }
+      },
+      "required": [
+        "code",
+        "message",
+        "details"
+      ]
     }
   }
 }

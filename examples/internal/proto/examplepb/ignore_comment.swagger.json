@@ -64,7 +64,11 @@
           "type": "string",
           "title": "This annotation should be preserved"
         }
-      }
+      },
+      "required": [
+        "username",
+        "password"
+      ]
     },
     "protobufAny": {
       "type": "object",
@@ -73,7 +77,11 @@
           "type": "string"
         }
       },
-      "additionalProperties": {}
+      "additionalProperties": {},
+      "required": [
+        "typeUrl",
+        "value"
+      ]
     },
     "rpcStatus": {
       "type": "object",
@@ -92,7 +100,12 @@
             "$ref": "#/definitions/protobufAny"
           }
         }
-      }
+      },
+      "required": [
+        "code",
+        "message",
+        "details"
+      ]
     }
   }
 }

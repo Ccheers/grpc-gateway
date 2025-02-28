@@ -11,7 +11,7 @@
 package abe
 
 type ABitOfEverythingServiceUpdateV2Body struct {
-	Abe *ABitOfEverything2 `json:"abe,omitempty"`
+	Abe *ABitOfEverything2 `json:"abe"`
 	// The paths to update.
-	UpdateMask string `json:"updateMask,omitempty"`
+	UpdateMask string `json:"updateMask"`
 }

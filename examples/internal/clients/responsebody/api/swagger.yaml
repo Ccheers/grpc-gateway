@@ -111,6 +111,8 @@ definitions:
     default: "UNKNOWN"
   examplepbRepeatedResponseBodyOut:
     type: "object"
+    required:
+    - "response"
     properties:
       response:
         type: "array"
@@ -118,6 +120,9 @@ definitions:
           $ref: "#/definitions/examplepbRepeatedResponseBodyOutResponse"
   examplepbRepeatedResponseBodyOutResponse:
     type: "object"
+    required:
+    - "data"
+    - "type"
     properties:
       data:
         type: "string"
@@ -128,6 +133,8 @@ definitions:
       type: {}
   examplepbRepeatedResponseStrings:
     type: "object"
+    required:
+    - "values"
     properties:
       values:
         type: "array"
@@ -135,11 +142,15 @@ definitions:
           type: "string"
   examplepbResponseBodyOut:
     type: "object"
+    required:
+    - "response"
     properties:
       response:
         $ref: "#/definitions/examplepbResponseBodyOutResponse"
   examplepbResponseBodyOutResponse:
     type: "object"
+    required:
+    - "data"
     properties:
       data:
         type: "string"
@@ -205,6 +216,10 @@ definitions:
     additionalProperties: {}
   rpcStatus:
     type: "object"
+    required:
+    - "code"
+    - "details"
+    - "message"
     properties:
       code:
         type: "integer"

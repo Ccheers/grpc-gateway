@@ -12,7 +12,7 @@ package abe
 
 type ExamplepbErrorObject struct {
 	// Response code
-	Code int32 `json:"code,omitempty"`
+	Code int32 `json:"code"`
 	// Response message
-	Message string `json:"message,omitempty"`
+	Message string `json:"message"`
 }

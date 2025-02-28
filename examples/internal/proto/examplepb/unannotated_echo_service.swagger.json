@@ -108,71 +108,71 @@
           {
             "name": "duration",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "lineNum",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "lang",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "status.progress",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "status.note",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "en",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "no.progress",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "no.note",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "resourceId",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "nId.nId",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "nId.val",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           }
         ],
@@ -245,71 +245,71 @@
           {
             "name": "duration",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "lineNum",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "lang",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "status.progress",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "status.note",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "en",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "no.progress",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "no.note",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "resourceId",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "nId.nId",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "nId.val",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           }
         ],
@@ -401,7 +401,7 @@
             "name": "id",
             "description": "Id represents the message identifier.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
@@ -416,71 +416,71 @@
           {
             "name": "duration",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "lineNum",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "lang",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "status.progress",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "status.note",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "en",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "no.progress",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "no.note",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "resourceId",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "nId.nId",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "nId.val",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           }
         ],
@@ -502,7 +502,11 @@
           "type": "string"
         }
       },
-      "description": "Embedded represents a message embedded in SimpleMessage."
+      "description": "Embedded represents a message embedded in SimpleMessage.",
+      "required": [
+        "progress",
+        "note"
+      ]
     },
     "examplepbUnannotatedNestedMessage": {
       "type": "object",
@@ -513,7 +517,11 @@
         "val": {
           "type": "string"
         }
-      }
+      },
+      "required": [
+        "nId",
+        "val"
+      ]
     },
     "examplepbUnannotatedSimpleMessage": {
       "type": "object",
@@ -566,7 +574,15 @@
       },
       "required": [
         "id",
-        "num"
+        "num",
+        "duration",
+        "lineNum",
+        "lang",
+        "status",
+        "en",
+        "no",
+        "resourceId",
+        "nId"
       ]
     },
     "protobufAny": {
@@ -576,7 +592,11 @@
           "type": "string"
         }
       },
-      "additionalProperties": {}
+      "additionalProperties": {},
+      "required": [
+        "typeUrl",
+        "value"
+      ]
     },
     "rpcStatus": {
       "type": "object",
@@ -595,7 +615,12 @@
             "$ref": "#/definitions/protobufAny"
           }
         }
-      }
+      },
+      "required": [
+        "code",
+        "message",
+        "details"
+      ]
     }
   },
   "securityDefinitions": {

@@ -10,7 +10,7 @@
 package generateunboundmethods
 
 type RpcStatus struct {
-	Code int32 `json:"code,omitempty"`
-	Message string `json:"message,omitempty"`
-	Details []ProtobufAny `json:"details,omitempty"`
+	Code    int32         `json:"code"`
+	Message string        `json:"message"`
+	Details []ProtobufAny `json:"details"`
 }

@@ -10,5 +10,5 @@
 package responsebody
 
 type ExamplepbRepeatedResponseStrings struct {
-	Values []string `json:"values,omitempty"`
+	Values []string `json:"values"`
 }

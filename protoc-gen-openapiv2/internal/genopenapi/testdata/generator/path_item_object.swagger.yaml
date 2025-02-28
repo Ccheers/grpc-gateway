@@ -20,7 +20,7 @@ paths:
       parameters:
         - name: value
           in: query
-          required: false
+          required: true
           type: string
       tags:
         - YourService
@@ -30,3 +30,5 @@ definitions:
     properties:
       value:
         type: string
+    required:
+      - value

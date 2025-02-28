@@ -12,13 +12,13 @@ package echo
 // SimpleMessage represents a simple message sent to the Echo service.
 type ExamplepbSimpleMessage struct {
 	// Id represents the message identifier.
-	Id string `json:"id,omitempty"`
-	Num string `json:"num,omitempty"`
-	LineNum string `json:"lineNum,omitempty"`
-	Lang string `json:"lang,omitempty"`
-	Status *ExamplepbEmbedded `json:"status,omitempty"`
-	En string `json:"en,omitempty"`
-	No *ExamplepbEmbedded `json:"no,omitempty"`
-	ResourceId string `json:"resourceId,omitempty"`
-	NId *ExamplepbNestedMessage `json:"nId,omitempty"`
+	Id         string                  `json:"id"`
+	Num        string                  `json:"num"`
+	LineNum    string                  `json:"lineNum"`
+	Lang       string                  `json:"lang"`
+	Status     *ExamplepbEmbedded      `json:"status"`
+	En         string                  `json:"en"`
+	No         *ExamplepbEmbedded      `json:"no"`
+	ResourceId string                  `json:"resourceId"`
+	NId        *ExamplepbNestedMessage `json:"nId"`
 }

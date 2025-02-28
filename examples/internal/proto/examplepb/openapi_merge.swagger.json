@@ -246,7 +246,10 @@
           "title": "Here is the explanation about InMessageA.values"
         }
       },
-      "description": "InMessageA represents a message to ServiceA and ServiceC."
+      "description": "InMessageA represents a message to ServiceA and ServiceC.",
+      "required": [
+        "values"
+      ]
     },
     "examplepbInMessageB": {
       "type": "object",
@@ -256,7 +259,10 @@
           "title": "Here is the explanation about InMessageB.values"
         }
       },
-      "description": "InMessageB represents a message to ServiceB."
+      "description": "InMessageB represents a message to ServiceB.",
+      "required": [
+        "value"
+      ]
     },
     "examplepbOutMessageA": {
       "type": "object",
@@ -266,7 +272,10 @@
           "title": "Here is the explanation about OutMessageA.value"
         }
       },
-      "description": "OutMessageA represents a message returned from ServiceA."
+      "description": "OutMessageA represents a message returned from ServiceA.",
+      "required": [
+        "value"
+      ]
     },
     "examplepbOutMessageB": {
       "type": "object",
@@ -279,7 +288,10 @@
           "title": "Here is the explanation about OutMessageB.value"
         }
       },
-      "description": "OutMessageB represents a message returned from ServiceB."
+      "description": "OutMessageB represents a message returned from ServiceB.",
+      "required": [
+        "values"
+      ]
     },
     "examplepbOutMessageC": {
       "type": "object",
@@ -289,7 +301,10 @@
           "title": "Here is the explanation about OutMessageC.value"
         }
       },
-      "description": "OutMessageC represents a message returned from ServiceC."
+      "description": "OutMessageC represents a message returned from ServiceC.",
+      "required": [
+        "value"
+      ]
     },
     "protobufAny": {
       "type": "object",
@@ -298,7 +313,11 @@
           "type": "string"
         }
       },
-      "additionalProperties": {}
+      "additionalProperties": {},
+      "required": [
+        "typeUrl",
+        "value"
+      ]
     },
     "rpcStatus": {
       "type": "object",
@@ -317,7 +336,12 @@
             "$ref": "#/definitions/protobufAny"
           }
         }
-      }
+      },
+      "required": [
+        "code",
+        "message",
+        "details"
+      ]
     }
   }
 }

@@ -10,5 +10,5 @@
 package responsebody
 
 type ExamplepbRepeatedResponseBodyOut struct {
-	Response []ExamplepbRepeatedResponseBodyOutResponse `json:"response,omitempty"`
+	Response []ExamplepbRepeatedResponseBodyOutResponse `json:"response"`
 }

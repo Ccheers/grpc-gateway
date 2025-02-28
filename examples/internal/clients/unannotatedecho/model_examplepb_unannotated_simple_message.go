@@ -15,13 +15,13 @@ type ExamplepbUnannotatedSimpleMessage struct {
 	// Id represents the message identifier.
 	Id string `json:"id"`
 	// Int value field
-	Num string `json:"num"`
-	Duration string `json:"duration,omitempty"`
-	LineNum string `json:"lineNum,omitempty"`
-	Lang string `json:"lang,omitempty"`
-	Status *ExamplepbUnannotatedEmbedded `json:"status,omitempty"`
-	En string `json:"en,omitempty"`
-	No *ExamplepbUnannotatedEmbedded `json:"no,omitempty"`
-	ResourceId string `json:"resourceId,omitempty"`
-	NId *ExamplepbUnannotatedNestedMessage `json:"nId,omitempty"`
+	Num        string                             `json:"num"`
+	Duration   string                             `json:"duration"`
+	LineNum    string                             `json:"lineNum"`
+	Lang       string                             `json:"lang"`
+	Status     *ExamplepbUnannotatedEmbedded      `json:"status"`
+	En         string                             `json:"en"`
+	No         *ExamplepbUnannotatedEmbedded      `json:"no"`
+	ResourceId string                             `json:"resourceId"`
+	NId        *ExamplepbUnannotatedNestedMessage `json:"nId"`
 }

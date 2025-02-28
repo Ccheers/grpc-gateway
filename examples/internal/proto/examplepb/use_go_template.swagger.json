@@ -96,7 +96,11 @@
           "type": "boolean",
           "title": "Whether you have access or not"
         }
-      }
+      },
+      "required": [
+        "message",
+        "access"
+      ]
     },
     "examplepbLoginRequest": {
       "type": "object",
@@ -109,7 +113,11 @@
           "type": "string",
           "title": "The entered password"
         }
-      }
+      },
+      "required": [
+        "username",
+        "password"
+      ]
     },
     "examplepbLogoutReply": {
       "type": "object",
@@ -118,7 +126,10 @@
           "type": "string",
           "title": "Message that tells you whether your\nlogout was successful or not"
         }
-      }
+      },
+      "required": [
+        "message"
+      ]
     },
     "examplepbLogoutRequest": {
       "type": "object",
@@ -141,7 +152,12 @@
           "description": "It displays that using [] in front of the type",
           "title": "This is an array"
         }
-      }
+      },
+      "required": [
+        "timeoflogout",
+        "test",
+        "stringarray"
+      ]
     },
     "protobufAny": {
       "type": "object",
@@ -150,7 +166,11 @@
           "type": "string"
         }
       },
-      "additionalProperties": {}
+      "additionalProperties": {},
+      "required": [
+        "typeUrl",
+        "value"
+      ]
     },
     "rpcStatus": {
       "type": "object",
@@ -169,7 +189,12 @@
             "$ref": "#/definitions/protobufAny"
           }
         }
-      }
+      },
+      "required": [
+        "code",
+        "message",
+        "details"
+      ]
     }
   }
 }

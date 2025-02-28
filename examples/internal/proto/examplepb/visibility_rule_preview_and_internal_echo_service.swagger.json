@@ -49,96 +49,96 @@
           {
             "name": "num",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "lineNum",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "lang",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "status.progress",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "status.note",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "status.internalField",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "status.previewField",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "en",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "no.progress",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "no.note",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "no.internalField",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "no.previewField",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "internalField",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "previewField",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "anEnum",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "VISIBILITY_ENUM_UNSPECIFIED",
@@ -151,7 +151,7 @@
           {
             "name": "ahiddenDefaultEnum",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "VISIBILITY_ENUM_HIDDEN_DEFAULT_UNSPECIFIED",
@@ -188,102 +188,102 @@
             "name": "id",
             "description": "Id represents the message identifier.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "num",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "lineNum",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "lang",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "status.progress",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "status.note",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "status.internalField",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "status.previewField",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "en",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "no.progress",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "no.note",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "no.internalField",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "no.previewField",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "internalField",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "previewField",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "anEnum",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "VISIBILITY_ENUM_UNSPECIFIED",
@@ -296,7 +296,7 @@
           {
             "name": "ahiddenDefaultEnum",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "VISIBILITY_ENUM_HIDDEN_DEFAULT_UNSPECIFIED",
@@ -333,102 +333,102 @@
             "name": "id",
             "description": "Id represents the message identifier.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "num",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "lineNum",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "lang",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "status.progress",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "status.note",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "status.internalField",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "status.previewField",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "en",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "no.progress",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "no.note",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "no.internalField",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "no.previewField",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "internalField",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "previewField",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "anEnum",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "VISIBILITY_ENUM_UNSPECIFIED",
@@ -441,7 +441,7 @@
           {
             "name": "ahiddenDefaultEnum",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "VISIBILITY_ENUM_HIDDEN_DEFAULT_UNSPECIFIED",
@@ -478,102 +478,102 @@
             "name": "id",
             "description": "Id represents the message identifier.",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "num",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "lineNum",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "lang",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "status.progress",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "status.note",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "status.internalField",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "status.previewField",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "en",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "no.progress",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "no.note",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "no.internalField",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "no.previewField",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "internalField",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "previewField",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "anEnum",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "VISIBILITY_ENUM_UNSPECIFIED",
@@ -586,7 +586,7 @@
           {
             "name": "ahiddenDefaultEnum",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "VISIBILITY_ENUM_HIDDEN_DEFAULT_UNSPECIFIED",
@@ -629,96 +629,96 @@
           {
             "name": "num",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "lineNum",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "lang",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "status.progress",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "status.note",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "status.internalField",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "status.previewField",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "en",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "no.progress",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "no.note",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "no.internalField",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "no.previewField",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "internalField",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "previewField",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "anEnum",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "VISIBILITY_ENUM_UNSPECIFIED",
@@ -731,7 +731,7 @@
           {
             "name": "ahiddenDefaultEnum",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "enum": [
               "VISIBILITY_ENUM_HIDDEN_DEFAULT_UNSPECIFIED",
@@ -782,7 +782,13 @@
           "type": "string"
         }
       },
-      "description": "Embedded represents a message embedded in SimpleMessage."
+      "description": "Embedded represents a message embedded in SimpleMessage.",
+      "required": [
+        "progress",
+        "note",
+        "internalField",
+        "previewField"
+      ]
     },
     "examplepbVisibilityRuleEnumInPreviewMethod": {
       "type": "string",
@@ -805,7 +811,12 @@
           "$ref": "#/definitions/examplepbVisibilityRuleEnumInPreviewMethod"
         }
       },
-      "description": "MessageInPreviewMethod doesn't define its own visibility restrictions,\nbut is only included in a method marked as \"PREVIEW\", so it will only\nappear if `visibility_restriction_selectors` include \"PREVIEW\"."
+      "description": "MessageInPreviewMethod doesn't define its own visibility restrictions,\nbut is only included in a method marked as \"PREVIEW\", so it will only\nappear if `visibility_restriction_selectors` include \"PREVIEW\".",
+      "required": [
+        "id",
+        "subMessage",
+        "enum"
+      ]
     },
     "examplepbVisibilityRuleSimpleMessage": {
       "type": "object",
@@ -848,7 +859,20 @@
           "$ref": "#/definitions/VisibilityRuleSimpleMessageVisibilityEnumHiddenDefault"
         }
       },
-      "description": "SimpleMessage represents a simple message sent to the Echo service."
+      "description": "SimpleMessage represents a simple message sent to the Echo service.",
+      "required": [
+        "id",
+        "num",
+        "lineNum",
+        "lang",
+        "status",
+        "en",
+        "no",
+        "internalField",
+        "previewField",
+        "anEnum",
+        "ahiddenDefaultEnum"
+      ]
     },
     "examplepbVisibilityRuleSubMessageInPreviewMethod": {
       "type": "object",
@@ -857,7 +881,10 @@
           "type": "string"
         }
       },
-      "description": "SubMessageInPreviewMethod doesn't define its own visibility restrictions,\nbut is only included in a method marked as \"PREVIEW\", so it will only\nappear if `visibility_restriction_selectors` include \"PREVIEW\"."
+      "description": "SubMessageInPreviewMethod doesn't define its own visibility restrictions,\nbut is only included in a method marked as \"PREVIEW\", so it will only\nappear if `visibility_restriction_selectors` include \"PREVIEW\".",
+      "required": [
+        "id"
+      ]
     },
     "protobufAny": {
       "type": "object",
@@ -866,7 +893,11 @@
           "type": "string"
         }
       },
-      "additionalProperties": {}
+      "additionalProperties": {},
+      "required": [
+        "typeUrl",
+        "value"
+      ]
     },
     "rpcStatus": {
       "type": "object",
@@ -885,7 +916,12 @@
             "$ref": "#/definitions/protobufAny"
           }
         }
-      }
+      },
+      "required": [
+        "code",
+        "message",
+        "details"
+      ]
     }
   }
 }

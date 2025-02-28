@@ -83,7 +83,7 @@ $(GENERATE_UNBOUND_METHODS_EXAMPLE_SRCS): $(GENERATE_UNBOUND_METHODS_EXAMPLE_SPE
 
 install:
 	go install github.com/bufbuild/buf/cmd/buf@v1.45.0
-	go install \
+	go install -buildvcs=false \
 		./protoc-gen-openapiv2 \
 		./protoc-gen-grpc-gateway
 

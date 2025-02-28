@@ -11,12 +11,11 @@ package echo
 
 import (
 	"context"
+	"fmt"
 	"io/ioutil"
 	"net/http"
 	"net/url"
 	"strings"
-	"fmt"
-	"github.com/antihax/optional"
 )
 
 // Linger please
@@ -26,47 +25,31 @@ var (
 
 type EchoServiceApiService service
 
-/* 
+/*
 EchoServiceApiService Echo method receives a simple message and returns it.
 The message posted as the id parameter will also be returned.
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id Id represents the message identifier.
- * @param optional nil or *EchoServiceEchoOpts - Optional Parameters:
-     * @param "Num" (optional.String) - 
-     * @param "LineNum" (optional.String) - 
-     * @param "Lang" (optional.String) - 
-     * @param "StatusProgress" (optional.String) - 
-     * @param "StatusNote" (optional.String) - 
-     * @param "En" (optional.String) - 
-     * @param "NoProgress" (optional.String) - 
-     * @param "NoNote" (optional.String) - 
-     * @param "ResourceId" (optional.String) - 
-     * @param "NIdNId" (optional.String) - 
-     * @param "NIdVal" (optional.String) - 
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id Id represents the message identifier.
+  - @param num
+  - @param lineNum
+  - @param lang
+  - @param statusProgress
+  - @param statusNote
+  - @param en
+  - @param noProgress
+  - @param noNote
+  - @param resourceId
+  - @param nIdNId
+  - @param nIdVal
 
 @return ExamplepbSimpleMessage
 */
-
-type EchoServiceEchoOpts struct { 
-	Num optional.String
-	LineNum optional.String
-	Lang optional.String
-	StatusProgress optional.String
-	StatusNote optional.String
-	En optional.String
-	NoProgress optional.String
-	NoNote optional.String
-	ResourceId optional.String
-	NIdNId optional.String
-	NIdVal optional.String
-}
-
-func (a *EchoServiceApiService) EchoServiceEcho(ctx context.Context, id string, localVarOptionals *EchoServiceEchoOpts) (ExamplepbSimpleMessage, *http.Response, error) {
+func (a *EchoServiceApiService) EchoServiceEcho(ctx context.Context, id string, num string, lineNum string, lang string, statusProgress string, statusNote string, en string, noProgress string, noNote string, resourceId string, nIdNId string, nIdVal string) (ExamplepbSimpleMessage, *http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Post")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		localVarHttpMethod  = strings.ToUpper("Post")
+		localVarPostBody    interface{}
+		localVarFileName    string
+		localVarFileBytes   []byte
 		localVarReturnValue ExamplepbSimpleMessage
 	)
 
@@ -78,39 +61,17 @@ func (a *EchoServiceApiService) EchoServiceEcho(ctx context.Context, id string, 
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-	if localVarOptionals != nil && localVarOptionals.Num.IsSet() {
-		localVarQueryParams.Add("num", parameterToString(localVarOptionals.Num.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.LineNum.IsSet() {
-		localVarQueryParams.Add("lineNum", parameterToString(localVarOptionals.LineNum.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.Lang.IsSet() {
-		localVarQueryParams.Add("lang", parameterToString(localVarOptionals.Lang.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.StatusProgress.IsSet() {
-		localVarQueryParams.Add("status.progress", parameterToString(localVarOptionals.StatusProgress.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.StatusNote.IsSet() {
-		localVarQueryParams.Add("status.note", parameterToString(localVarOptionals.StatusNote.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.En.IsSet() {
-		localVarQueryParams.Add("en", parameterToString(localVarOptionals.En.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.NoProgress.IsSet() {
-		localVarQueryParams.Add("no.progress", parameterToString(localVarOptionals.NoProgress.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.NoNote.IsSet() {
-		localVarQueryParams.Add("no.note", parameterToString(localVarOptionals.NoNote.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.ResourceId.IsSet() {
-		localVarQueryParams.Add("resourceId", parameterToString(localVarOptionals.ResourceId.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.NIdNId.IsSet() {
-		localVarQueryParams.Add("nId.nId", parameterToString(localVarOptionals.NIdNId.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.NIdVal.IsSet() {
-		localVarQueryParams.Add("nId.val", parameterToString(localVarOptionals.NIdVal.Value(), ""))
-	}
+	localVarQueryParams.Add("num", parameterToString(num, ""))
+	localVarQueryParams.Add("lineNum", parameterToString(lineNum, ""))
+	localVarQueryParams.Add("lang", parameterToString(lang, ""))
+	localVarQueryParams.Add("status.progress", parameterToString(statusProgress, ""))
+	localVarQueryParams.Add("status.note", parameterToString(statusNote, ""))
+	localVarQueryParams.Add("en", parameterToString(en, ""))
+	localVarQueryParams.Add("no.progress", parameterToString(noProgress, ""))
+	localVarQueryParams.Add("no.note", parameterToString(noNote, ""))
+	localVarQueryParams.Add("resourceId", parameterToString(resourceId, ""))
+	localVarQueryParams.Add("nId.nId", parameterToString(nIdNId, ""))
+	localVarQueryParams.Add("nId.val", parameterToString(nIdVal, ""))
 	// to determine the Content-Type header
 	localVarHttpContentTypes := []string{"application/json"}
 
@@ -146,86 +107,71 @@ func (a *EchoServiceApiService) EchoServiceEcho(ctx context.Context, id string, 
 
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
-		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
+		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+		if err == nil {
 			return localVarReturnValue, localVarHttpResponse, err
 		}
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body: localVarBody,
+			body:  localVarBody,
 			error: localVarHttpResponse.Status,
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 200 {
 			var v ExamplepbSimpleMessage
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 0 {
 			var v RpcStatus
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		return localVarReturnValue, localVarHttpResponse, newErr
 	}
 
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 EchoServiceApiService Echo method receives a simple message and returns it.
 The message posted as the id parameter will also be returned.
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id Id represents the message identifier.
- * @param num
- * @param optional nil or *EchoServiceEcho2Opts - Optional Parameters:
-     * @param "LineNum" (optional.String) - 
-     * @param "Lang" (optional.String) - 
-     * @param "StatusProgress" (optional.String) - 
-     * @param "StatusNote" (optional.String) - 
-     * @param "En" (optional.String) - 
-     * @param "NoProgress" (optional.String) - 
-     * @param "NoNote" (optional.String) - 
-     * @param "ResourceId" (optional.String) - 
-     * @param "NIdNId" (optional.String) - 
-     * @param "NIdVal" (optional.String) - 
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id Id represents the message identifier.
+  - @param num
+  - @param lineNum
+  - @param lang
+  - @param statusProgress
+  - @param statusNote
+  - @param en
+  - @param noProgress
+  - @param noNote
+  - @param resourceId
+  - @param nIdNId
+  - @param nIdVal
 
 @return ExamplepbSimpleMessage
 */
-
-type EchoServiceEcho2Opts struct { 
-	LineNum optional.String
-	Lang optional.String
-	StatusProgress optional.String
-	StatusNote optional.String
-	En optional.String
-	NoProgress optional.String
-	NoNote optional.String
-	ResourceId optional.String
-	NIdNId optional.String
-	NIdVal optional.String
-}
-
-func (a *EchoServiceApiService) EchoServiceEcho2(ctx context.Context, id string, num string, localVarOptionals *EchoServiceEcho2Opts) (ExamplepbSimpleMessage, *http.Response, error) {
+func (a *EchoServiceApiService) EchoServiceEcho2(ctx context.Context, id string, num string, lineNum string, lang string, statusProgress string, statusNote string, en string, noProgress string, noNote string, resourceId string, nIdNId string, nIdVal string) (ExamplepbSimpleMessage, *http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		localVarHttpMethod  = strings.ToUpper("Get")
+		localVarPostBody    interface{}
+		localVarFileName    string
+		localVarFileBytes   []byte
 		localVarReturnValue ExamplepbSimpleMessage
 	)
 
@@ -238,36 +184,16 @@ func (a *EchoServiceApiService) EchoServiceEcho2(ctx context.Context, id string,
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-	if localVarOptionals != nil && localVarOptionals.LineNum.IsSet() {
-		localVarQueryParams.Add("lineNum", parameterToString(localVarOptionals.LineNum.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.Lang.IsSet() {
-		localVarQueryParams.Add("lang", parameterToString(localVarOptionals.Lang.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.StatusProgress.IsSet() {
-		localVarQueryParams.Add("status.progress", parameterToString(localVarOptionals.StatusProgress.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.StatusNote.IsSet() {
-		localVarQueryParams.Add("status.note", parameterToString(localVarOptionals.StatusNote.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.En.IsSet() {
-		localVarQueryParams.Add("en", parameterToString(localVarOptionals.En.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.NoProgress.IsSet() {
-		localVarQueryParams.Add("no.progress", parameterToString(localVarOptionals.NoProgress.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.NoNote.IsSet() {
-		localVarQueryParams.Add("no.note", parameterToString(localVarOptionals.NoNote.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.ResourceId.IsSet() {
-		localVarQueryParams.Add("resourceId", parameterToString(localVarOptionals.ResourceId.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.NIdNId.IsSet() {
-		localVarQueryParams.Add("nId.nId", parameterToString(localVarOptionals.NIdNId.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.NIdVal.IsSet() {
-		localVarQueryParams.Add("nId.val", parameterToString(localVarOptionals.NIdVal.Value(), ""))
-	}
+	localVarQueryParams.Add("lineNum", parameterToString(lineNum, ""))
+	localVarQueryParams.Add("lang", parameterToString(lang, ""))
+	localVarQueryParams.Add("status.progress", parameterToString(statusProgress, ""))
+	localVarQueryParams.Add("status.note", parameterToString(statusNote, ""))
+	localVarQueryParams.Add("en", parameterToString(en, ""))
+	localVarQueryParams.Add("no.progress", parameterToString(noProgress, ""))
+	localVarQueryParams.Add("no.note", parameterToString(noNote, ""))
+	localVarQueryParams.Add("resourceId", parameterToString(resourceId, ""))
+	localVarQueryParams.Add("nId.nId", parameterToString(nIdNId, ""))
+	localVarQueryParams.Add("nId.val", parameterToString(nIdVal, ""))
 	// to determine the Content-Type header
 	localVarHttpContentTypes := []string{"application/json"}
 
@@ -303,85 +229,71 @@ func (a *EchoServiceApiService) EchoServiceEcho2(ctx context.Context, id string,
 
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
-		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
+		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+		if err == nil {
 			return localVarReturnValue, localVarHttpResponse, err
 		}
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body: localVarBody,
+			body:  localVarBody,
 			error: localVarHttpResponse.Status,
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 200 {
 			var v ExamplepbSimpleMessage
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 0 {
 			var v RpcStatus
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		return localVarReturnValue, localVarHttpResponse, newErr
 	}
 
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 EchoServiceApiService Echo method receives a simple message and returns it.
 The message posted as the id parameter will also be returned.
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id Id represents the message identifier.
- * @param num
- * @param lang
- * @param optional nil or *EchoServiceEcho3Opts - Optional Parameters:
-     * @param "LineNum" (optional.String) - 
-     * @param "StatusProgress" (optional.String) - 
-     * @param "StatusNote" (optional.String) - 
-     * @param "En" (optional.String) - 
-     * @param "NoProgress" (optional.String) - 
-     * @param "NoNote" (optional.String) - 
-     * @param "ResourceId" (optional.String) - 
-     * @param "NIdNId" (optional.String) - 
-     * @param "NIdVal" (optional.String) - 
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id Id represents the message identifier.
+  - @param num
+  - @param lang
+  - @param lineNum
+  - @param statusProgress
+  - @param statusNote
+  - @param en
+  - @param noProgress
+  - @param noNote
+  - @param resourceId
+  - @param nIdNId
+  - @param nIdVal
 
 @return ExamplepbSimpleMessage
 */
-
-type EchoServiceEcho3Opts struct { 
-	LineNum optional.String
-	StatusProgress optional.String
-	StatusNote optional.String
-	En optional.String
-	NoProgress optional.String
-	NoNote optional.String
-	ResourceId optional.String
-	NIdNId optional.String
-	NIdVal optional.String
-}
-
-func (a *EchoServiceApiService) EchoServiceEcho3(ctx context.Context, id string, num string, lang string, localVarOptionals *EchoServiceEcho3Opts) (ExamplepbSimpleMessage, *http.Response, error) {
+func (a *EchoServiceApiService) EchoServiceEcho3(ctx context.Context, id string, num string, lang string, lineNum string, statusProgress string, statusNote string, en string, noProgress string, noNote string, resourceId string, nIdNId string, nIdVal string) (ExamplepbSimpleMessage, *http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		localVarHttpMethod  = strings.ToUpper("Get")
+		localVarPostBody    interface{}
+		localVarFileName    string
+		localVarFileBytes   []byte
 		localVarReturnValue ExamplepbSimpleMessage
 	)
 
@@ -395,33 +307,15 @@ func (a *EchoServiceApiService) EchoServiceEcho3(ctx context.Context, id string,
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-	if localVarOptionals != nil && localVarOptionals.LineNum.IsSet() {
-		localVarQueryParams.Add("lineNum", parameterToString(localVarOptionals.LineNum.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.StatusProgress.IsSet() {
-		localVarQueryParams.Add("status.progress", parameterToString(localVarOptionals.StatusProgress.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.StatusNote.IsSet() {
-		localVarQueryParams.Add("status.note", parameterToString(localVarOptionals.StatusNote.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.En.IsSet() {
-		localVarQueryParams.Add("en", parameterToString(localVarOptionals.En.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.NoProgress.IsSet() {
-		localVarQueryParams.Add("no.progress", parameterToString(localVarOptionals.NoProgress.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.NoNote.IsSet() {
-		localVarQueryParams.Add("no.note", parameterToString(localVarOptionals.NoNote.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.ResourceId.IsSet() {
-		localVarQueryParams.Add("resourceId", parameterToString(localVarOptionals.ResourceId.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.NIdNId.IsSet() {
-		localVarQueryParams.Add("nId.nId", parameterToString(localVarOptionals.NIdNId.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.NIdVal.IsSet() {
-		localVarQueryParams.Add("nId.val", parameterToString(localVarOptionals.NIdVal.Value(), ""))
-	}
+	localVarQueryParams.Add("lineNum", parameterToString(lineNum, ""))
+	localVarQueryParams.Add("status.progress", parameterToString(statusProgress, ""))
+	localVarQueryParams.Add("status.note", parameterToString(statusNote, ""))
+	localVarQueryParams.Add("en", parameterToString(en, ""))
+	localVarQueryParams.Add("no.progress", parameterToString(noProgress, ""))
+	localVarQueryParams.Add("no.note", parameterToString(noNote, ""))
+	localVarQueryParams.Add("resourceId", parameterToString(resourceId, ""))
+	localVarQueryParams.Add("nId.nId", parameterToString(nIdNId, ""))
+	localVarQueryParams.Add("nId.val", parameterToString(nIdVal, ""))
 	// to determine the Content-Type header
 	localVarHttpContentTypes := []string{"application/json"}
 
@@ -457,83 +351,70 @@ func (a *EchoServiceApiService) EchoServiceEcho3(ctx context.Context, id string,
 
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
-		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
+		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+		if err == nil {
 			return localVarReturnValue, localVarHttpResponse, err
 		}
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body: localVarBody,
+			body:  localVarBody,
 			error: localVarHttpResponse.Status,
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 200 {
 			var v ExamplepbSimpleMessage
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 0 {
 			var v RpcStatus
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		return localVarReturnValue, localVarHttpResponse, newErr
 	}
 
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 EchoServiceApiService Echo method receives a simple message and returns it.
 The message posted as the id parameter will also be returned.
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id Id represents the message identifier.
- * @param lineNum
- * @param statusNote
- * @param optional nil or *EchoServiceEcho4Opts - Optional Parameters:
-     * @param "Num" (optional.String) - 
-     * @param "Lang" (optional.String) - 
-     * @param "StatusProgress" (optional.String) - 
-     * @param "En" (optional.String) - 
-     * @param "NoProgress" (optional.String) - 
-     * @param "ResourceId" (optional.String) - 
-     * @param "NIdNId" (optional.String) - 
-     * @param "NIdVal" (optional.String) - 
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id Id represents the message identifier.
+  - @param lineNum
+  - @param statusNote
+  - @param num
+  - @param lang
+  - @param statusProgress
+  - @param en
+  - @param noProgress
+  - @param resourceId
+  - @param nIdNId
+  - @param nIdVal
 
 @return ExamplepbSimpleMessage
 */
-
-type EchoServiceEcho4Opts struct { 
-	Num optional.String
-	Lang optional.String
-	StatusProgress optional.String
-	En optional.String
-	NoProgress optional.String
-	ResourceId optional.String
-	NIdNId optional.String
-	NIdVal optional.String
-}
-
-func (a *EchoServiceApiService) EchoServiceEcho4(ctx context.Context, id string, lineNum string, statusNote string, localVarOptionals *EchoServiceEcho4Opts) (ExamplepbSimpleMessage, *http.Response, error) {
+func (a *EchoServiceApiService) EchoServiceEcho4(ctx context.Context, id string, lineNum string, statusNote string, num string, lang string, statusProgress string, en string, noProgress string, resourceId string, nIdNId string, nIdVal string) (ExamplepbSimpleMessage, *http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		localVarHttpMethod  = strings.ToUpper("Get")
+		localVarPostBody    interface{}
+		localVarFileName    string
+		localVarFileBytes   []byte
 		localVarReturnValue ExamplepbSimpleMessage
 	)
 
@@ -547,30 +428,14 @@ func (a *EchoServiceApiService) EchoServiceEcho4(ctx context.Context, id string,
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-	if localVarOptionals != nil && localVarOptionals.Num.IsSet() {
-		localVarQueryParams.Add("num", parameterToString(localVarOptionals.Num.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.Lang.IsSet() {
-		localVarQueryParams.Add("lang", parameterToString(localVarOptionals.Lang.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.StatusProgress.IsSet() {
-		localVarQueryParams.Add("status.progress", parameterToString(localVarOptionals.StatusProgress.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.En.IsSet() {
-		localVarQueryParams.Add("en", parameterToString(localVarOptionals.En.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.NoProgress.IsSet() {
-		localVarQueryParams.Add("no.progress", parameterToString(localVarOptionals.NoProgress.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.ResourceId.IsSet() {
-		localVarQueryParams.Add("resourceId", parameterToString(localVarOptionals.ResourceId.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.NIdNId.IsSet() {
-		localVarQueryParams.Add("nId.nId", parameterToString(localVarOptionals.NIdNId.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.NIdVal.IsSet() {
-		localVarQueryParams.Add("nId.val", parameterToString(localVarOptionals.NIdVal.Value(), ""))
-	}
+	localVarQueryParams.Add("num", parameterToString(num, ""))
+	localVarQueryParams.Add("lang", parameterToString(lang, ""))
+	localVarQueryParams.Add("status.progress", parameterToString(statusProgress, ""))
+	localVarQueryParams.Add("en", parameterToString(en, ""))
+	localVarQueryParams.Add("no.progress", parameterToString(noProgress, ""))
+	localVarQueryParams.Add("resourceId", parameterToString(resourceId, ""))
+	localVarQueryParams.Add("nId.nId", parameterToString(nIdNId, ""))
+	localVarQueryParams.Add("nId.val", parameterToString(nIdVal, ""))
 	// to determine the Content-Type header
 	localVarHttpContentTypes := []string{"application/json"}
 
@@ -606,85 +471,70 @@ func (a *EchoServiceApiService) EchoServiceEcho4(ctx context.Context, id string,
 
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
-		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
+		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+		if err == nil {
 			return localVarReturnValue, localVarHttpResponse, err
 		}
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body: localVarBody,
+			body:  localVarBody,
 			error: localVarHttpResponse.Status,
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 200 {
 			var v ExamplepbSimpleMessage
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 0 {
 			var v RpcStatus
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		return localVarReturnValue, localVarHttpResponse, newErr
 	}
 
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 EchoServiceApiService Echo method receives a simple message and returns it.
 The message posted as the id parameter will also be returned.
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param noNote
- * @param optional nil or *EchoServiceEcho5Opts - Optional Parameters:
-     * @param "Id" (optional.String) -  Id represents the message identifier.
-     * @param "Num" (optional.String) - 
-     * @param "LineNum" (optional.String) - 
-     * @param "Lang" (optional.String) - 
-     * @param "StatusProgress" (optional.String) - 
-     * @param "En" (optional.String) - 
-     * @param "NoProgress" (optional.String) - 
-     * @param "ResourceId" (optional.String) - 
-     * @param "NIdNId" (optional.String) - 
-     * @param "NIdVal" (optional.String) - 
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param noNote
+  - @param id Id represents the message identifier.
+  - @param num
+  - @param lineNum
+  - @param lang
+  - @param statusProgress
+  - @param en
+  - @param noProgress
+  - @param resourceId
+  - @param nIdNId
+  - @param nIdVal
 
 @return ExamplepbSimpleMessage
 */
-
-type EchoServiceEcho5Opts struct { 
-	Id optional.String
-	Num optional.String
-	LineNum optional.String
-	Lang optional.String
-	StatusProgress optional.String
-	En optional.String
-	NoProgress optional.String
-	ResourceId optional.String
-	NIdNId optional.String
-	NIdVal optional.String
-}
-
-func (a *EchoServiceApiService) EchoServiceEcho5(ctx context.Context, noNote string, localVarOptionals *EchoServiceEcho5Opts) (ExamplepbSimpleMessage, *http.Response, error) {
+func (a *EchoServiceApiService) EchoServiceEcho5(ctx context.Context, noNote string, id string, num string, lineNum string, lang string, statusProgress string, en string, noProgress string, resourceId string, nIdNId string, nIdVal string) (ExamplepbSimpleMessage, *http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		localVarHttpMethod  = strings.ToUpper("Get")
+		localVarPostBody    interface{}
+		localVarFileName    string
+		localVarFileBytes   []byte
 		localVarReturnValue ExamplepbSimpleMessage
 	)
 
@@ -696,36 +546,16 @@ func (a *EchoServiceApiService) EchoServiceEcho5(ctx context.Context, noNote str
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-	if localVarOptionals != nil && localVarOptionals.Id.IsSet() {
-		localVarQueryParams.Add("id", parameterToString(localVarOptionals.Id.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.Num.IsSet() {
-		localVarQueryParams.Add("num", parameterToString(localVarOptionals.Num.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.LineNum.IsSet() {
-		localVarQueryParams.Add("lineNum", parameterToString(localVarOptionals.LineNum.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.Lang.IsSet() {
-		localVarQueryParams.Add("lang", parameterToString(localVarOptionals.Lang.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.StatusProgress.IsSet() {
-		localVarQueryParams.Add("status.progress", parameterToString(localVarOptionals.StatusProgress.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.En.IsSet() {
-		localVarQueryParams.Add("en", parameterToString(localVarOptionals.En.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.NoProgress.IsSet() {
-		localVarQueryParams.Add("no.progress", parameterToString(localVarOptionals.NoProgress.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.ResourceId.IsSet() {
-		localVarQueryParams.Add("resourceId", parameterToString(localVarOptionals.ResourceId.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.NIdNId.IsSet() {
-		localVarQueryParams.Add("nId.nId", parameterToString(localVarOptionals.NIdNId.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.NIdVal.IsSet() {
-		localVarQueryParams.Add("nId.val", parameterToString(localVarOptionals.NIdVal.Value(), ""))
-	}
+	localVarQueryParams.Add("id", parameterToString(id, ""))
+	localVarQueryParams.Add("num", parameterToString(num, ""))
+	localVarQueryParams.Add("lineNum", parameterToString(lineNum, ""))
+	localVarQueryParams.Add("lang", parameterToString(lang, ""))
+	localVarQueryParams.Add("status.progress", parameterToString(statusProgress, ""))
+	localVarQueryParams.Add("en", parameterToString(en, ""))
+	localVarQueryParams.Add("no.progress", parameterToString(noProgress, ""))
+	localVarQueryParams.Add("resourceId", parameterToString(resourceId, ""))
+	localVarQueryParams.Add("nId.nId", parameterToString(nIdNId, ""))
+	localVarQueryParams.Add("nId.val", parameterToString(nIdVal, ""))
 	// to determine the Content-Type header
 	localVarHttpContentTypes := []string{"application/json"}
 
@@ -761,87 +591,71 @@ func (a *EchoServiceApiService) EchoServiceEcho5(ctx context.Context, noNote str
 
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
-		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
+		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+		if err == nil {
 			return localVarReturnValue, localVarHttpResponse, err
 		}
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body: localVarBody,
+			body:  localVarBody,
 			error: localVarHttpResponse.Status,
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 200 {
 			var v ExamplepbSimpleMessage
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 0 {
 			var v RpcStatus
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		return localVarReturnValue, localVarHttpResponse, newErr
 	}
 
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 EchoServiceApiService Echo method receives a simple message and returns it.
 The message posted as the id parameter will also be returned.
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param resourceId
- * @param optional nil or *EchoServiceEcho6Opts - Optional Parameters:
-     * @param "Id" (optional.String) -  Id represents the message identifier.
-     * @param "Num" (optional.String) - 
-     * @param "LineNum" (optional.String) - 
-     * @param "Lang" (optional.String) - 
-     * @param "StatusProgress" (optional.String) - 
-     * @param "StatusNote" (optional.String) - 
-     * @param "En" (optional.String) - 
-     * @param "NoProgress" (optional.String) - 
-     * @param "NoNote" (optional.String) - 
-     * @param "NIdNId" (optional.String) - 
-     * @param "NIdVal" (optional.String) - 
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param resourceId
+  - @param id Id represents the message identifier.
+  - @param num
+  - @param lineNum
+  - @param lang
+  - @param statusProgress
+  - @param statusNote
+  - @param en
+  - @param noProgress
+  - @param noNote
+  - @param nIdNId
+  - @param nIdVal
 
 @return ExamplepbSimpleMessage
 */
-
-type EchoServiceEcho6Opts struct { 
-	Id optional.String
-	Num optional.String
-	LineNum optional.String
-	Lang optional.String
-	StatusProgress optional.String
-	StatusNote optional.String
-	En optional.String
-	NoProgress optional.String
-	NoNote optional.String
-	NIdNId optional.String
-	NIdVal optional.String
-}
-
-func (a *EchoServiceApiService) EchoServiceEcho6(ctx context.Context, resourceId string, localVarOptionals *EchoServiceEcho6Opts) (ExamplepbSimpleMessage, *http.Response, error) {
+func (a *EchoServiceApiService) EchoServiceEcho6(ctx context.Context, resourceId string, id string, num string, lineNum string, lang string, statusProgress string, statusNote string, en string, noProgress string, noNote string, nIdNId string, nIdVal string) (ExamplepbSimpleMessage, *http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		localVarHttpMethod  = strings.ToUpper("Get")
+		localVarPostBody    interface{}
+		localVarFileName    string
+		localVarFileBytes   []byte
 		localVarReturnValue ExamplepbSimpleMessage
 	)
 
@@ -853,39 +667,17 @@ func (a *EchoServiceApiService) EchoServiceEcho6(ctx context.Context, resourceId
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-	if localVarOptionals != nil && localVarOptionals.Id.IsSet() {
-		localVarQueryParams.Add("id", parameterToString(localVarOptionals.Id.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.Num.IsSet() {
-		localVarQueryParams.Add("num", parameterToString(localVarOptionals.Num.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.LineNum.IsSet() {
-		localVarQueryParams.Add("lineNum", parameterToString(localVarOptionals.LineNum.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.Lang.IsSet() {
-		localVarQueryParams.Add("lang", parameterToString(localVarOptionals.Lang.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.StatusProgress.IsSet() {
-		localVarQueryParams.Add("status.progress", parameterToString(localVarOptionals.StatusProgress.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.StatusNote.IsSet() {
-		localVarQueryParams.Add("status.note", parameterToString(localVarOptionals.StatusNote.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.En.IsSet() {
-		localVarQueryParams.Add("en", parameterToString(localVarOptionals.En.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.NoProgress.IsSet() {
-		localVarQueryParams.Add("no.progress", parameterToString(localVarOptionals.NoProgress.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.NoNote.IsSet() {
-		localVarQueryParams.Add("no.note", parameterToString(localVarOptionals.NoNote.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.NIdNId.IsSet() {
-		localVarQueryParams.Add("nId.nId", parameterToString(localVarOptionals.NIdNId.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.NIdVal.IsSet() {
-		localVarQueryParams.Add("nId.val", parameterToString(localVarOptionals.NIdVal.Value(), ""))
-	}
+	localVarQueryParams.Add("id", parameterToString(id, ""))
+	localVarQueryParams.Add("num", parameterToString(num, ""))
+	localVarQueryParams.Add("lineNum", parameterToString(lineNum, ""))
+	localVarQueryParams.Add("lang", parameterToString(lang, ""))
+	localVarQueryParams.Add("status.progress", parameterToString(statusProgress, ""))
+	localVarQueryParams.Add("status.note", parameterToString(statusNote, ""))
+	localVarQueryParams.Add("en", parameterToString(en, ""))
+	localVarQueryParams.Add("no.progress", parameterToString(noProgress, ""))
+	localVarQueryParams.Add("no.note", parameterToString(noNote, ""))
+	localVarQueryParams.Add("nId.nId", parameterToString(nIdNId, ""))
+	localVarQueryParams.Add("nId.val", parameterToString(nIdVal, ""))
 	// to determine the Content-Type header
 	localVarHttpContentTypes := []string{"application/json"}
 
@@ -921,87 +713,71 @@ func (a *EchoServiceApiService) EchoServiceEcho6(ctx context.Context, resourceId
 
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
-		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
+		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+		if err == nil {
 			return localVarReturnValue, localVarHttpResponse, err
 		}
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body: localVarBody,
+			body:  localVarBody,
 			error: localVarHttpResponse.Status,
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 200 {
 			var v ExamplepbSimpleMessage
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 0 {
 			var v RpcStatus
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		return localVarReturnValue, localVarHttpResponse, newErr
 	}
 
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 EchoServiceApiService Echo method receives a simple message and returns it.
 The message posted as the id parameter will also be returned.
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param nIdNId
- * @param optional nil or *EchoServiceEcho7Opts - Optional Parameters:
-     * @param "Id" (optional.String) -  Id represents the message identifier.
-     * @param "Num" (optional.String) - 
-     * @param "LineNum" (optional.String) - 
-     * @param "Lang" (optional.String) - 
-     * @param "StatusProgress" (optional.String) - 
-     * @param "StatusNote" (optional.String) - 
-     * @param "En" (optional.String) - 
-     * @param "NoProgress" (optional.String) - 
-     * @param "NoNote" (optional.String) - 
-     * @param "ResourceId" (optional.String) - 
-     * @param "NIdVal" (optional.String) - 
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param nIdNId
+  - @param id Id represents the message identifier.
+  - @param num
+  - @param lineNum
+  - @param lang
+  - @param statusProgress
+  - @param statusNote
+  - @param en
+  - @param noProgress
+  - @param noNote
+  - @param resourceId
+  - @param nIdVal
 
 @return ExamplepbSimpleMessage
 */
-
-type EchoServiceEcho7Opts struct { 
-	Id optional.String
-	Num optional.String
-	LineNum optional.String
-	Lang optional.String
-	StatusProgress optional.String
-	StatusNote optional.String
-	En optional.String
-	NoProgress optional.String
-	NoNote optional.String
-	ResourceId optional.String
-	NIdVal optional.String
-}
-
-func (a *EchoServiceApiService) EchoServiceEcho7(ctx context.Context, nIdNId string, localVarOptionals *EchoServiceEcho7Opts) (ExamplepbSimpleMessage, *http.Response, error) {
+func (a *EchoServiceApiService) EchoServiceEcho7(ctx context.Context, nIdNId string, id string, num string, lineNum string, lang string, statusProgress string, statusNote string, en string, noProgress string, noNote string, resourceId string, nIdVal string) (ExamplepbSimpleMessage, *http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		localVarHttpMethod  = strings.ToUpper("Get")
+		localVarPostBody    interface{}
+		localVarFileName    string
+		localVarFileBytes   []byte
 		localVarReturnValue ExamplepbSimpleMessage
 	)
 
@@ -1013,39 +789,17 @@ func (a *EchoServiceApiService) EchoServiceEcho7(ctx context.Context, nIdNId str
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-	if localVarOptionals != nil && localVarOptionals.Id.IsSet() {
-		localVarQueryParams.Add("id", parameterToString(localVarOptionals.Id.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.Num.IsSet() {
-		localVarQueryParams.Add("num", parameterToString(localVarOptionals.Num.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.LineNum.IsSet() {
-		localVarQueryParams.Add("lineNum", parameterToString(localVarOptionals.LineNum.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.Lang.IsSet() {
-		localVarQueryParams.Add("lang", parameterToString(localVarOptionals.Lang.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.StatusProgress.IsSet() {
-		localVarQueryParams.Add("status.progress", parameterToString(localVarOptionals.StatusProgress.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.StatusNote.IsSet() {
-		localVarQueryParams.Add("status.note", parameterToString(localVarOptionals.StatusNote.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.En.IsSet() {
-		localVarQueryParams.Add("en", parameterToString(localVarOptionals.En.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.NoProgress.IsSet() {
-		localVarQueryParams.Add("no.progress", parameterToString(localVarOptionals.NoProgress.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.NoNote.IsSet() {
-		localVarQueryParams.Add("no.note", parameterToString(localVarOptionals.NoNote.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.ResourceId.IsSet() {
-		localVarQueryParams.Add("resourceId", parameterToString(localVarOptionals.ResourceId.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.NIdVal.IsSet() {
-		localVarQueryParams.Add("nId.val", parameterToString(localVarOptionals.NIdVal.Value(), ""))
-	}
+	localVarQueryParams.Add("id", parameterToString(id, ""))
+	localVarQueryParams.Add("num", parameterToString(num, ""))
+	localVarQueryParams.Add("lineNum", parameterToString(lineNum, ""))
+	localVarQueryParams.Add("lang", parameterToString(lang, ""))
+	localVarQueryParams.Add("status.progress", parameterToString(statusProgress, ""))
+	localVarQueryParams.Add("status.note", parameterToString(statusNote, ""))
+	localVarQueryParams.Add("en", parameterToString(en, ""))
+	localVarQueryParams.Add("no.progress", parameterToString(noProgress, ""))
+	localVarQueryParams.Add("no.note", parameterToString(noNote, ""))
+	localVarQueryParams.Add("resourceId", parameterToString(resourceId, ""))
+	localVarQueryParams.Add("nId.val", parameterToString(nIdVal, ""))
 	// to determine the Content-Type header
 	localVarHttpContentTypes := []string{"application/json"}
 
@@ -1081,59 +835,59 @@ func (a *EchoServiceApiService) EchoServiceEcho7(ctx context.Context, nIdNId str
 
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
-		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
+		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+		if err == nil {
 			return localVarReturnValue, localVarHttpResponse, err
 		}
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body: localVarBody,
+			body:  localVarBody,
 			error: localVarHttpResponse.Status,
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 200 {
 			var v ExamplepbSimpleMessage
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 0 {
 			var v RpcStatus
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		return localVarReturnValue, localVarHttpResponse, newErr
 	}
 
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 EchoServiceApiService EchoBody method receives a simple message and returns it.
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param body SimpleMessage represents a simple message sent to the Echo service.
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param body SimpleMessage represents a simple message sent to the Echo service.
 
 @return ExamplepbSimpleMessage
 */
 func (a *EchoServiceApiService) EchoServiceEchoBody(ctx context.Context, body ExamplepbSimpleMessage) (ExamplepbSimpleMessage, *http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Post")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		localVarHttpMethod  = strings.ToUpper("Post")
+		localVarPostBody    interface{}
+		localVarFileName    string
+		localVarFileBytes   []byte
 		localVarReturnValue ExamplepbSimpleMessage
 	)
 
@@ -1181,81 +935,68 @@ func (a *EchoServiceApiService) EchoServiceEchoBody(ctx context.Context, body Ex
 
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
-		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
+		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+		if err == nil {
 			return localVarReturnValue, localVarHttpResponse, err
 		}
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body: localVarBody,
+			body:  localVarBody,
 			error: localVarHttpResponse.Status,
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 200 {
 			var v ExamplepbSimpleMessage
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 0 {
 			var v RpcStatus
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		return localVarReturnValue, localVarHttpResponse, newErr
 	}
 
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 EchoServiceApiService EchoBody method receives a simple message and returns it.
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id Id represents the message identifier.
- * @param no
- * @param optional nil or *EchoServiceEchoBody2Opts - Optional Parameters:
-     * @param "Num" (optional.String) - 
-     * @param "LineNum" (optional.String) - 
-     * @param "Lang" (optional.String) - 
-     * @param "StatusProgress" (optional.String) - 
-     * @param "StatusNote" (optional.String) - 
-     * @param "ResourceId" (optional.String) - 
-     * @param "NIdNId" (optional.String) - 
-     * @param "NIdVal" (optional.String) - 
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id Id represents the message identifier.
+  - @param no
+  - @param num
+  - @param lineNum
+  - @param lang
+  - @param statusProgress
+  - @param statusNote
+  - @param resourceId
+  - @param nIdNId
+  - @param nIdVal
 
 @return ExamplepbSimpleMessage
 */
-
-type EchoServiceEchoBody2Opts struct { 
-	Num optional.String
-	LineNum optional.String
-	Lang optional.String
-	StatusProgress optional.String
-	StatusNote optional.String
-	ResourceId optional.String
-	NIdNId optional.String
-	NIdVal optional.String
-}
-
-func (a *EchoServiceApiService) EchoServiceEchoBody2(ctx context.Context, id string, no ExamplepbEmbedded, localVarOptionals *EchoServiceEchoBody2Opts) (ExamplepbSimpleMessage, *http.Response, error) {
+func (a *EchoServiceApiService) EchoServiceEchoBody2(ctx context.Context, id string, no ExamplepbEmbedded, num string, lineNum string, lang string, statusProgress string, statusNote string, resourceId string, nIdNId string, nIdVal string) (ExamplepbSimpleMessage, *http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Put")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		localVarHttpMethod  = strings.ToUpper("Put")
+		localVarPostBody    interface{}
+		localVarFileName    string
+		localVarFileBytes   []byte
 		localVarReturnValue ExamplepbSimpleMessage
 	)
 
@@ -1267,30 +1008,14 @@ func (a *EchoServiceApiService) EchoServiceEchoBody2(ctx context.Context, id str
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-	if localVarOptionals != nil && localVarOptionals.Num.IsSet() {
-		localVarQueryParams.Add("num", parameterToString(localVarOptionals.Num.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.LineNum.IsSet() {
-		localVarQueryParams.Add("lineNum", parameterToString(localVarOptionals.LineNum.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.Lang.IsSet() {
-		localVarQueryParams.Add("lang", parameterToString(localVarOptionals.Lang.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.StatusProgress.IsSet() {
-		localVarQueryParams.Add("status.progress", parameterToString(localVarOptionals.StatusProgress.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.StatusNote.IsSet() {
-		localVarQueryParams.Add("status.note", parameterToString(localVarOptionals.StatusNote.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.ResourceId.IsSet() {
-		localVarQueryParams.Add("resourceId", parameterToString(localVarOptionals.ResourceId.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.NIdNId.IsSet() {
-		localVarQueryParams.Add("nId.nId", parameterToString(localVarOptionals.NIdNId.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.NIdVal.IsSet() {
-		localVarQueryParams.Add("nId.val", parameterToString(localVarOptionals.NIdVal.Value(), ""))
-	}
+	localVarQueryParams.Add("num", parameterToString(num, ""))
+	localVarQueryParams.Add("lineNum", parameterToString(lineNum, ""))
+	localVarQueryParams.Add("lang", parameterToString(lang, ""))
+	localVarQueryParams.Add("status.progress", parameterToString(statusProgress, ""))
+	localVarQueryParams.Add("status.note", parameterToString(statusNote, ""))
+	localVarQueryParams.Add("resourceId", parameterToString(resourceId, ""))
+	localVarQueryParams.Add("nId.nId", parameterToString(nIdNId, ""))
+	localVarQueryParams.Add("nId.val", parameterToString(nIdVal, ""))
 	// to determine the Content-Type header
 	localVarHttpContentTypes := []string{"application/json"}
 
@@ -1328,87 +1053,70 @@ func (a *EchoServiceApiService) EchoServiceEchoBody2(ctx context.Context, id str
 
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
-		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
+		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+		if err == nil {
 			return localVarReturnValue, localVarHttpResponse, err
 		}
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body: localVarBody,
+			body:  localVarBody,
 			error: localVarHttpResponse.Status,
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 200 {
 			var v ExamplepbSimpleMessage
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 0 {
 			var v RpcStatus
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		return localVarReturnValue, localVarHttpResponse, newErr
 	}
 
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 EchoServiceApiService EchoDelete method receives a simple message and returns it.
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *EchoServiceEchoDeleteOpts - Optional Parameters:
-     * @param "Id" (optional.String) -  Id represents the message identifier.
-     * @param "Num" (optional.String) - 
-     * @param "LineNum" (optional.String) - 
-     * @param "Lang" (optional.String) - 
-     * @param "StatusProgress" (optional.String) - 
-     * @param "StatusNote" (optional.String) - 
-     * @param "En" (optional.String) - 
-     * @param "NoProgress" (optional.String) - 
-     * @param "NoNote" (optional.String) - 
-     * @param "ResourceId" (optional.String) - 
-     * @param "NIdNId" (optional.String) - 
-     * @param "NIdVal" (optional.String) - 
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id Id represents the message identifier.
+  - @param num
+  - @param lineNum
+  - @param lang
+  - @param statusProgress
+  - @param statusNote
+  - @param en
+  - @param noProgress
+  - @param noNote
+  - @param resourceId
+  - @param nIdNId
+  - @param nIdVal
 
 @return ExamplepbSimpleMessage
 */
-
-type EchoServiceEchoDeleteOpts struct { 
-	Id optional.String
-	Num optional.String
-	LineNum optional.String
-	Lang optional.String
-	StatusProgress optional.String
-	StatusNote optional.String
-	En optional.String
-	NoProgress optional.String
-	NoNote optional.String
-	ResourceId optional.String
-	NIdNId optional.String
-	NIdVal optional.String
-}
-
-func (a *EchoServiceApiService) EchoServiceEchoDelete(ctx context.Context, localVarOptionals *EchoServiceEchoDeleteOpts) (ExamplepbSimpleMessage, *http.Response, error) {
+func (a *EchoServiceApiService) EchoServiceEchoDelete(ctx context.Context, id string, num string, lineNum string, lang string, statusProgress string, statusNote string, en string, noProgress string, noNote string, resourceId string, nIdNId string, nIdVal string) (ExamplepbSimpleMessage, *http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Delete")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		localVarHttpMethod  = strings.ToUpper("Delete")
+		localVarPostBody    interface{}
+		localVarFileName    string
+		localVarFileBytes   []byte
 		localVarReturnValue ExamplepbSimpleMessage
 	)
 
@@ -1419,42 +1127,18 @@ func (a *EchoServiceApiService) EchoServiceEchoDelete(ctx context.Context, local
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-	if localVarOptionals != nil && localVarOptionals.Id.IsSet() {
-		localVarQueryParams.Add("id", parameterToString(localVarOptionals.Id.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.Num.IsSet() {
-		localVarQueryParams.Add("num", parameterToString(localVarOptionals.Num.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.LineNum.IsSet() {
-		localVarQueryParams.Add("lineNum", parameterToString(localVarOptionals.LineNum.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.Lang.IsSet() {
-		localVarQueryParams.Add("lang", parameterToString(localVarOptionals.Lang.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.StatusProgress.IsSet() {
-		localVarQueryParams.Add("status.progress", parameterToString(localVarOptionals.StatusProgress.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.StatusNote.IsSet() {
-		localVarQueryParams.Add("status.note", parameterToString(localVarOptionals.StatusNote.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.En.IsSet() {
-		localVarQueryParams.Add("en", parameterToString(localVarOptionals.En.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.NoProgress.IsSet() {
-		localVarQueryParams.Add("no.progress", parameterToString(localVarOptionals.NoProgress.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.NoNote.IsSet() {
-		localVarQueryParams.Add("no.note", parameterToString(localVarOptionals.NoNote.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.ResourceId.IsSet() {
-		localVarQueryParams.Add("resourceId", parameterToString(localVarOptionals.ResourceId.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.NIdNId.IsSet() {
-		localVarQueryParams.Add("nId.nId", parameterToString(localVarOptionals.NIdNId.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.NIdVal.IsSet() {
-		localVarQueryParams.Add("nId.val", parameterToString(localVarOptionals.NIdVal.Value(), ""))
-	}
+	localVarQueryParams.Add("id", parameterToString(id, ""))
+	localVarQueryParams.Add("num", parameterToString(num, ""))
+	localVarQueryParams.Add("lineNum", parameterToString(lineNum, ""))
+	localVarQueryParams.Add("lang", parameterToString(lang, ""))
+	localVarQueryParams.Add("status.progress", parameterToString(statusProgress, ""))
+	localVarQueryParams.Add("status.note", parameterToString(statusNote, ""))
+	localVarQueryParams.Add("en", parameterToString(en, ""))
+	localVarQueryParams.Add("no.progress", parameterToString(noProgress, ""))
+	localVarQueryParams.Add("no.note", parameterToString(noNote, ""))
+	localVarQueryParams.Add("resourceId", parameterToString(resourceId, ""))
+	localVarQueryParams.Add("nId.nId", parameterToString(nIdNId, ""))
+	localVarQueryParams.Add("nId.val", parameterToString(nIdVal, ""))
 	// to determine the Content-Type header
 	localVarHttpContentTypes := []string{"application/json"}
 
@@ -1490,59 +1174,59 @@ func (a *EchoServiceApiService) EchoServiceEchoDelete(ctx context.Context, local
 
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
-		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
+		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+		if err == nil {
 			return localVarReturnValue, localVarHttpResponse, err
 		}
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body: localVarBody,
+			body:  localVarBody,
 			error: localVarHttpResponse.Status,
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 200 {
 			var v ExamplepbSimpleMessage
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 0 {
 			var v RpcStatus
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		return localVarReturnValue, localVarHttpResponse, newErr
 	}
 
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 EchoServiceApiService EchoPatch method receives a NonStandardUpdateRequest and returns it.
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param body
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param body
 
 @return ExamplepbDynamicMessageUpdate
 */
 func (a *EchoServiceApiService) EchoServiceEchoPatch(ctx context.Context, body ExamplepbDynamicMessage) (ExamplepbDynamicMessageUpdate, *http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Patch")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		localVarHttpMethod  = strings.ToUpper("Patch")
+		localVarPostBody    interface{}
+		localVarFileName    string
+		localVarFileBytes   []byte
 		localVarReturnValue ExamplepbDynamicMessageUpdate
 	)
 
@@ -1590,87 +1274,70 @@ func (a *EchoServiceApiService) EchoServiceEchoPatch(ctx context.Context, body E
 
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
-		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
+		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+		if err == nil {
 			return localVarReturnValue, localVarHttpResponse, err
 		}
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body: localVarBody,
+			body:  localVarBody,
 			error: localVarHttpResponse.Status,
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 200 {
 			var v ExamplepbDynamicMessageUpdate
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 0 {
 			var v RpcStatus
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		return localVarReturnValue, localVarHttpResponse, newErr
 	}
 
 	return localVarReturnValue, localVarHttpResponse, nil
 }
 
-/* 
+/*
 EchoServiceApiService EchoUnauthorized method receives a simple message and returns it. It must always return a google.rpc.Code of &#x60;UNAUTHENTICATED&#x60; and a HTTP Status code of 401.
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *EchoServiceEchoUnauthorizedOpts - Optional Parameters:
-     * @param "Id" (optional.String) -  Id represents the message identifier.
-     * @param "Num" (optional.String) - 
-     * @param "LineNum" (optional.String) - 
-     * @param "Lang" (optional.String) - 
-     * @param "StatusProgress" (optional.String) - 
-     * @param "StatusNote" (optional.String) - 
-     * @param "En" (optional.String) - 
-     * @param "NoProgress" (optional.String) - 
-     * @param "NoNote" (optional.String) - 
-     * @param "ResourceId" (optional.String) - 
-     * @param "NIdNId" (optional.String) - 
-     * @param "NIdVal" (optional.String) - 
+  - @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+  - @param id Id represents the message identifier.
+  - @param num
+  - @param lineNum
+  - @param lang
+  - @param statusProgress
+  - @param statusNote
+  - @param en
+  - @param noProgress
+  - @param noNote
+  - @param resourceId
+  - @param nIdNId
+  - @param nIdVal
 
 @return ExamplepbSimpleMessage
 */
-
-type EchoServiceEchoUnauthorizedOpts struct { 
-	Id optional.String
-	Num optional.String
-	LineNum optional.String
-	Lang optional.String
-	StatusProgress optional.String
-	StatusNote optional.String
-	En optional.String
-	NoProgress optional.String
-	NoNote optional.String
-	ResourceId optional.String
-	NIdNId optional.String
-	NIdVal optional.String
-}
-
-func (a *EchoServiceApiService) EchoServiceEchoUnauthorized(ctx context.Context, localVarOptionals *EchoServiceEchoUnauthorizedOpts) (ExamplepbSimpleMessage, *http.Response, error) {
+func (a *EchoServiceApiService) EchoServiceEchoUnauthorized(ctx context.Context, id string, num string, lineNum string, lang string, statusProgress string, statusNote string, en string, noProgress string, noNote string, resourceId string, nIdNId string, nIdVal string) (ExamplepbSimpleMessage, *http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		localVarHttpMethod  = strings.ToUpper("Get")
+		localVarPostBody    interface{}
+		localVarFileName    string
+		localVarFileBytes   []byte
 		localVarReturnValue ExamplepbSimpleMessage
 	)
 
@@ -1681,42 +1348,18 @@ func (a *EchoServiceApiService) EchoServiceEchoUnauthorized(ctx context.Context,
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 
-	if localVarOptionals != nil && localVarOptionals.Id.IsSet() {
-		localVarQueryParams.Add("id", parameterToString(localVarOptionals.Id.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.Num.IsSet() {
-		localVarQueryParams.Add("num", parameterToString(localVarOptionals.Num.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.LineNum.IsSet() {
-		localVarQueryParams.Add("lineNum", parameterToString(localVarOptionals.LineNum.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.Lang.IsSet() {
-		localVarQueryParams.Add("lang", parameterToString(localVarOptionals.Lang.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.StatusProgress.IsSet() {
-		localVarQueryParams.Add("status.progress", parameterToString(localVarOptionals.StatusProgress.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.StatusNote.IsSet() {
-		localVarQueryParams.Add("status.note", parameterToString(localVarOptionals.StatusNote.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.En.IsSet() {
-		localVarQueryParams.Add("en", parameterToString(localVarOptionals.En.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.NoProgress.IsSet() {
-		localVarQueryParams.Add("no.progress", parameterToString(localVarOptionals.NoProgress.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.NoNote.IsSet() {
-		localVarQueryParams.Add("no.note", parameterToString(localVarOptionals.NoNote.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.ResourceId.IsSet() {
-		localVarQueryParams.Add("resourceId", parameterToString(localVarOptionals.ResourceId.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.NIdNId.IsSet() {
-		localVarQueryParams.Add("nId.nId", parameterToString(localVarOptionals.NIdNId.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.NIdVal.IsSet() {
-		localVarQueryParams.Add("nId.val", parameterToString(localVarOptionals.NIdVal.Value(), ""))
-	}
+	localVarQueryParams.Add("id", parameterToString(id, ""))
+	localVarQueryParams.Add("num", parameterToString(num, ""))
+	localVarQueryParams.Add("lineNum", parameterToString(lineNum, ""))
+	localVarQueryParams.Add("lang", parameterToString(lang, ""))
+	localVarQueryParams.Add("status.progress", parameterToString(statusProgress, ""))
+	localVarQueryParams.Add("status.note", parameterToString(statusNote, ""))
+	localVarQueryParams.Add("en", parameterToString(en, ""))
+	localVarQueryParams.Add("no.progress", parameterToString(noProgress, ""))
+	localVarQueryParams.Add("no.note", parameterToString(noNote, ""))
+	localVarQueryParams.Add("resourceId", parameterToString(resourceId, ""))
+	localVarQueryParams.Add("nId.nId", parameterToString(nIdNId, ""))
+	localVarQueryParams.Add("nId.val", parameterToString(nIdVal, ""))
 	// to determine the Content-Type header
 	localVarHttpContentTypes := []string{"application/json"}
 
@@ -1752,40 +1395,40 @@ func (a *EchoServiceApiService) EchoServiceEchoUnauthorized(ctx context.Context,
 
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
-		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
+		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+		if err == nil {
 			return localVarReturnValue, localVarHttpResponse, err
 		}
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body: localVarBody,
+			body:  localVarBody,
 			error: localVarHttpResponse.Status,
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 200 {
 			var v ExamplepbSimpleMessage
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 0 {
 			var v RpcStatus
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		return localVarReturnValue, localVarHttpResponse, newErr
 	}
 

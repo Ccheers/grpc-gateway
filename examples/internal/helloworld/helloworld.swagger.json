@@ -43,61 +43,61 @@
           {
             "name": "name",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "strVal",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "floatVal",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "number",
             "format": "float"
           },
           {
             "name": "doubleVal",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "number",
             "format": "double"
           },
           {
             "name": "bytesVal",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "byte"
           },
           {
             "name": "int32Val",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int32"
           },
           {
             "name": "uint32Val",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
           {
             "name": "int64Val",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "uint64Val",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "uint64"
           }
@@ -135,60 +135,60 @@
           {
             "name": "name",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "strVal",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "floatVal",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "number",
             "format": "float"
           },
           {
             "name": "doubleVal",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "number",
             "format": "double"
           },
           {
             "name": "boolVal",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "boolean"
           },
           {
             "name": "int32Val",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int32"
           },
           {
             "name": "uint32Val",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
           {
             "name": "int64Val",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "uint64Val",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "uint64"
           }
@@ -226,60 +226,60 @@
           {
             "name": "name",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "strVal",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "floatVal",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "number",
             "format": "float"
           },
           {
             "name": "boolVal",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "boolean"
           },
           {
             "name": "bytesVal",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "byte"
           },
           {
             "name": "int32Val",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int32"
           },
           {
             "name": "uint32Val",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
           {
             "name": "int64Val",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "uint64Val",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "uint64"
           }
@@ -317,60 +317,60 @@
           {
             "name": "name",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "strVal",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "doubleVal",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "number",
             "format": "double"
           },
           {
             "name": "boolVal",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "boolean"
           },
           {
             "name": "bytesVal",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "byte"
           },
           {
             "name": "int32Val",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int32"
           },
           {
             "name": "uint32Val",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
           {
             "name": "int64Val",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "uint64Val",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "uint64"
           }
@@ -408,60 +408,60 @@
           {
             "name": "name",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "strVal",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "floatVal",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "number",
             "format": "float"
           },
           {
             "name": "doubleVal",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "number",
             "format": "double"
           },
           {
             "name": "boolVal",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "boolean"
           },
           {
             "name": "bytesVal",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "byte"
           },
           {
             "name": "uint32Val",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
           {
             "name": "int64Val",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "uint64Val",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "uint64"
           }
@@ -499,60 +499,60 @@
           {
             "name": "name",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "strVal",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "floatVal",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "number",
             "format": "float"
           },
           {
             "name": "doubleVal",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "number",
             "format": "double"
           },
           {
             "name": "boolVal",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "boolean"
           },
           {
             "name": "bytesVal",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "byte"
           },
           {
             "name": "int32Val",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int32"
           },
           {
             "name": "uint32Val",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
           {
             "name": "uint64Val",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "uint64"
           }
@@ -589,61 +589,61 @@
           {
             "name": "name",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "floatVal",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "number",
             "format": "float"
           },
           {
             "name": "doubleVal",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "number",
             "format": "double"
           },
           {
             "name": "boolVal",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "boolean"
           },
           {
             "name": "bytesVal",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "byte"
           },
           {
             "name": "int32Val",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int32"
           },
           {
             "name": "uint32Val",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
           {
             "name": "int64Val",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "uint64Val",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "uint64"
           }
@@ -681,60 +681,60 @@
           {
             "name": "name",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "strVal",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "floatVal",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "number",
             "format": "float"
           },
           {
             "name": "doubleVal",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "number",
             "format": "double"
           },
           {
             "name": "boolVal",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "boolean"
           },
           {
             "name": "bytesVal",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "byte"
           },
           {
             "name": "int32Val",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int32"
           },
           {
             "name": "int64Val",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "uint64Val",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "uint64"
           }
@@ -772,60 +772,60 @@
           {
             "name": "name",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "strVal",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "floatVal",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "number",
             "format": "float"
           },
           {
             "name": "doubleVal",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "number",
             "format": "double"
           },
           {
             "name": "boolVal",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "boolean"
           },
           {
             "name": "bytesVal",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "byte"
           },
           {
             "name": "int32Val",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int32"
           },
           {
             "name": "uint32Val",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
           {
             "name": "int64Val",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           }
@@ -862,61 +862,61 @@
           {
             "name": "strVal",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string"
           },
           {
             "name": "floatVal",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "number",
             "format": "float"
           },
           {
             "name": "doubleVal",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "number",
             "format": "double"
           },
           {
             "name": "boolVal",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "boolean"
           },
           {
             "name": "bytesVal",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "byte"
           },
           {
             "name": "int32Val",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int32"
           },
           {
             "name": "uint32Val",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "integer",
             "format": "int64"
           },
           {
             "name": "int64Val",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "int64"
           },
           {
             "name": "uint64Val",
             "in": "query",
-            "required": false,
+            "required": true,
             "type": "string",
             "format": "uint64"
           }
@@ -934,7 +934,10 @@
         "message": {
           "type": "string"
         }
-      }
+      },
+      "required": [
+        "message"
+      ]
     },
     "protobufAny": {
       "type": "object",
@@ -943,7 +946,11 @@
           "type": "string"
         }
       },
-      "additionalProperties": {}
+      "additionalProperties": {},
+      "required": [
+        "typeUrl",
+        "value"
+      ]
     },
     "rpcStatus": {
       "type": "object",
@@ -962,7 +969,12 @@
             "$ref": "#/definitions/protobufAny"
           }
         }
-      }
+      },
+      "required": [
+        "code",
+        "message",
+        "details"
+      ]
     }
   }
 }

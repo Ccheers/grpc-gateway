@@ -17,7 +17,7 @@ import (
 // The book's `name` field is used to identify the book to be updated. Format: publishers/{publisher}/books/{book}
 type TheBookToUpdate_ struct {
 	// Output only. The book's ID.
-	Id string `json:"id,omitempty"`
+	Id string `json:"id"`
 	// Output only. Creation time of the book.
-	CreateTime time.Time `json:"createTime,omitempty"`
+	CreateTime time.Time `json:"createTime"`
 }

@@ -12,6 +12,6 @@ package abe
 
 type ExamplepbErrorResponse struct {
 	// Unique event identifier for server requests
-	CorrelationId string `json:"correlationId,omitempty"`
-	Error_ *ExamplepbErrorObject `json:"error,omitempty"`
+	CorrelationId string                `json:"correlationId"`
+	Error_        *ExamplepbErrorObject `json:"error"`
 }
